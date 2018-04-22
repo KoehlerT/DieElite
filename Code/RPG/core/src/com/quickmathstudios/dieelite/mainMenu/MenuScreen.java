@@ -1,46 +1,35 @@
 package com.quickmathstudios.dieelite.mainMenu;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.quickmathstudios.dieelite.input.MouseInfo;
-import com.quickmathstudios.dieelite.loadingScreen.loadingState;
-import com.quickmathstudios.dieelite.main.StateEngine;
-import com.quickmathstudios.dieelite.utillity.Observable;
-import com.quickmathstudios.dieelite.utillity.Observer;
 import com.quickmathstudios.dieelite.utillity.State;
 
-public class MenuScreen implements State, Observer {
+public class MenuScreen implements State {
 
-    Texture background;
+    MainMenu menu;
+    MenuController contr;
+    MenuRenderer rend;
 
     @Override
     public void Show() {
-        background = new Texture("menuback.png");
-        MouseInfo.getInstance().addObserver(this);
+        menu = new MainMenu();
+        contr = new MenuController(menu);
+        rend = new MenuRenderer(menu);
     }
 
     @Override
     public void Render(SpriteBatch batch) {
-        batch.draw(background,0,0);
+        rend.Render(batch);
     }
 
     @Override
     public void Update(float delta) {
-
     }
 
     @Override
     public void dispose() {
-        background.dispose();
-        MouseInfo.getInstance().deleteObserver(this);
+        contr.dispose();
+        menu.dispose();
+
     }
 
-    @Override
-    public void Update(Observable observable, Object sender) {
-        //Es wurde geklickt
-        //State newState = new GameState();
-        State newState = new loadingState();
-        this.dispose();
-        StateEngine.getInstance().SwitchState(newState);
-    }
 }

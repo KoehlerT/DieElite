@@ -22,6 +22,7 @@ public class GameMain extends ApplicationAdapter {
 		register = new InputRegister();
 		Gdx.input.setInputProcessor(register);
 		stateEngine.SwitchState(mainMenu);
+
 	}
 
 	@Override

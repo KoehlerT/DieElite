@@ -7,10 +7,10 @@ import com.quickmathstudios.dieelite.utillity.Observer;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MouseInfo implements Observable {
+public class MouseClick implements Observable {
 
-    private static MouseInfo instance;
-    public static MouseInfo getInstance(){return instance;}
+    private static MouseClick instance;
+    public static MouseClick getInstance(){return instance;}
 
     private List<Observer> observers = new LinkedList<Observer>();
     
@@ -18,7 +18,7 @@ public class MouseInfo implements Observable {
     private int y;
     private Vector2 position;
 
-    public MouseInfo(){
+    public MouseClick(){
         instance = this;
         position = new Vector2(x,y);
     }

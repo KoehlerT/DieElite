@@ -5,10 +5,12 @@ import com.quickmathstudios.dieelite.main.Info;
 
 public class InputRegister implements InputProcessor {
 
-    private MouseInfo mouseInfo;
+    private MouseClick mouseClick;
+    private MouseHover mouseHover;
 
     public InputRegister(){
-        mouseInfo = new MouseInfo();
+        mouseClick = new MouseClick();
+        mouseHover = new MouseHover();
     }
     @Override
     public boolean keyDown(int i) {
@@ -28,7 +30,7 @@ public class InputRegister implements InputProcessor {
     @Override
     public boolean touchDown(int x, int y, int pointer, int button) {
         if(button ==0 && pointer == 0){
-            mouseInfo.updateKoordinates(x, Info.Height-y); //Normalisieren, Unten Links 0,0
+            mouseClick.updateKoordinates(x, Info.Height-y); //Normalisieren, Unten Links 0,0
         }
         return false;
     }
@@ -45,6 +47,7 @@ public class InputRegister implements InputProcessor {
 
     @Override
     public boolean mouseMoved(int i, int i1) {
+        mouseHover.updateCoordinates(i,Info.Height-i1);
         return false;
     }
 

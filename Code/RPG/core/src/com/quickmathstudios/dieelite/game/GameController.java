@@ -6,7 +6,7 @@ import com.quickmathstudios.dieelite.game.dialogueEngine.DialogueController;
 import com.quickmathstudios.dieelite.game.interactables.Interactable;
 import com.quickmathstudios.dieelite.game.player.Player;
 import com.quickmathstudios.dieelite.game.rooms.Room;
-import com.quickmathstudios.dieelite.input.MouseInfo;
+import com.quickmathstudios.dieelite.input.MouseClick;
 import com.quickmathstudios.dieelite.utillity.Observable;
 import com.quickmathstudios.dieelite.utillity.Observer;
 
@@ -15,14 +15,14 @@ public class GameController implements Observer {
     private DialogueController dialogueController;
 
     public GameController(){
-        MouseInfo.getInstance().addObserver(this);
+        MouseClick.getInstance().addObserver(this);
         Player.getInstance().setPosition(new Vector2(500,500));
         dialogueController = new DialogueController();
     }
     @Override
     public void Update(Observable observable, Object sender) {
-        if (sender instanceof MouseInfo) {
-            MouseInfo mouseInfo = (MouseInfo) sender;
+        if (sender instanceof MouseClick) {
+            MouseClick mouseInfo = (MouseClick) sender;
             Vector2 cursor = mouseInfo.getPosition();
             boolean hasInteracted = false;
 
@@ -71,7 +71,7 @@ public class GameController implements Observer {
     }
 
     public void dispose(){
-        MouseInfo.getInstance().deleteObserver(this);
+        MouseClick.getInstance().deleteObserver(this);
         dialogueController.dispose();
     }
 }

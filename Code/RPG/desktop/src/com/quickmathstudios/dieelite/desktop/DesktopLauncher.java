@@ -10,6 +10,7 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.width = Info.Width;
 		config.height = Info.Height;
+		config.title = "Die Elite";
 		new LwjglApplication(new GameMain(), config);
 	}
 }
