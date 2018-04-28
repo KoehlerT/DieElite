@@ -1,8 +1,10 @@
 package com.quickmathstudios.dieelite.utillity.hit;
 
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
+import com.quickmathstudios.dieelite.main.SoundManager;
 import com.quickmathstudios.dieelite.utillity.Action;
 import com.quickmathstudios.dieelite.utillity.Observable;
 import com.quickmathstudios.dieelite.utillity.Observer;
@@ -16,6 +18,7 @@ public class Button extends HitBox {
     private Texture hover;
     private Vector2 position;
     private Action action;
+
 
     private boolean hovers = false;
 
@@ -34,6 +37,7 @@ public class Button extends HitBox {
 
     public void hover(Vector2 mousePos){
         if (super.intersects(mousePos) && !hovers){
+            SoundManager.getInstance().playSoundByName("hover");
             hovers = true;
         }else if (!super.intersects(mousePos) && hovers){
             hovers = false;
@@ -55,6 +59,7 @@ public class Button extends HitBox {
 
     public void click(){
         action.act();
+        SoundManager.getInstance().playSoundByName("click");
     }
 
     public void dispose(){

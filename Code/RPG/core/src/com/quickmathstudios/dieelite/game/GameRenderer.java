@@ -6,6 +6,8 @@ import com.quickmathstudios.dieelite.game.interactables.Interactable;
 import com.quickmathstudios.dieelite.game.player.Player;
 import com.quickmathstudios.dieelite.game.rooms.Room;
 
+/**Zeigt den Aktuellen Raum an
+ * **/
 public class GameRenderer {
 
     public DialogueRenderer dialogueRenderer;

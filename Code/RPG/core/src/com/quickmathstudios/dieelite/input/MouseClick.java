@@ -9,9 +9,11 @@ import java.util.List;
 
 public class MouseClick implements Observable {
 
+    //Singleton
     private static MouseClick instance;
     public static MouseClick getInstance(){return instance;}
 
+    //Liste der Beobachtenden
     private List<Observer> observers = new LinkedList<Observer>();
     
     private int x;
@@ -24,13 +26,16 @@ public class MouseClick implements Observable {
     }
     
     void updateKoordinates(int x, int y){
+        //Koordinaten werden aktualisiert
         this.x = x;
         this.y = y;
         position.x = (float)x;
         position.y = (float)y;
+        //Die Beobachtenden werden informiert
         notifyObservers();
     }
-    
+
+    //Getter
     public int getX(){return x;}
     public int getY(){return y;}
     public Vector2 getPosition(){return position;}

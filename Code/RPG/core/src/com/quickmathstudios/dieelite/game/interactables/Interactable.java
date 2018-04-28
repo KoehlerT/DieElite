@@ -2,28 +2,40 @@ package com.quickmathstudios.dieelite.game.interactables;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
+import com.quickmathstudios.dieelite.utillity.Action;
+import com.quickmathstudios.dieelite.utillity.hit.Hitable;
 
+/**Ineraktionsfähiges Objekt
+ * **/
 public abstract class Interactable {
 
-    protected int InteractionRadius;
-    protected int ClickRadius;
-    protected Vector2 position;
+    protected Hitable InteractionRadius; //Minimaler Radius für Interaktion
+    protected Hitable ClickRadius;  //Hitbox für Mauscursor
+    protected Action interaction; //Funktion der Interaktion
+    protected Vector2 position; //Position (UL) der Grafik und Zentrum der Radien
 
-    public Interactable(int ir, int cr){
-        InteractionRadius = ir;
-        ClickRadius = cr;
+    public Interactable(Hitable interactionBox, Hitable clickBox, Action action){
+        InteractionRadius = interactionBox;
+        ClickRadius = clickBox;
+        interaction = action;
     }
 
-    public abstract void interact();
 
+    //INteraktionsmethode muss überschrieben werden
+    public void interact(){
+        interaction.act();
+    };
+
+    //Kontrolieren
     public boolean inRadius(Vector2 obj){
-        return (obj.dst(position) < InteractionRadius);
+        return InteractionRadius.intersects(obj);
     }
 
     public boolean isClicked(Vector2 cursorPos){
-        return (cursorPos.dst(position) < ClickRadius);
+        return ClickRadius.intersects(cursorPos);
     }
 
+    //Getter
     public Vector2 getPosition() {
         return position;
     }

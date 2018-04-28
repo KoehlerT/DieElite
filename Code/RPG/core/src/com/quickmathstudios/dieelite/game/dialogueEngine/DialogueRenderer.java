@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.Message;
 
+/**Zeigt das Dialog-Interface an
+ * **/
 public class DialogueRenderer {
 
     BitmapFont font;

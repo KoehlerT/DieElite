@@ -14,14 +14,21 @@ import com.quickmathstudios.dieelite.utillity.Observer;
 import com.quickmathstudios.dieelite.utillity.State;
 import com.quickmathstudios.dieelite.utillity.hit.Button;
 
+/**Credits Screen
+ * Model-View-Controller Schema wird verletzt
+ * Klasse ist State, Model, View und Controller gleichzeitig
+ *
+ * **/
 public class CreditsState implements State, Observer {
 
-    private Texture background;
-    private Button back;
+    private Texture background; //Hintergrundtextur
+    private Button back; //Zurückbutton
 
     @Override
     public void Show() {
         background = new Texture("credits/background.png");
+
+        //Zurückschaltfäche wird instanziiert
         back = new Button(new Texture("credits/backBtn.png"),
                 new Texture("credits/backBtn_hover.png"),
                 new Vector2(1000, 50),
@@ -32,13 +39,16 @@ public class CreditsState implements State, Observer {
             }
         });
 
+        //Klasse beobachtet Mausklicks und -bewegungen
         MouseClick.getInstance().addObserver(this);
         MouseHover.getInstance().addObserver(this);
     }
 
     @Override
     public void Render(SpriteBatch batch) {
+        //Hintergrund wird angezeigt
         batch.draw(background,0,0);
+        //Zeigt den Button
         batch.draw(back.getTexture(),back.getPosition().x,back.getPosition().y);
     }
 
@@ -47,6 +57,7 @@ public class CreditsState implements State, Observer {
 
     @Override
     public void dispose() {
+        //Arbeitsspeicher freigeben
         background.dispose();
         back.dispose();
         MouseHover.getInstance().deleteObserver(this);
@@ -56,12 +67,15 @@ public class CreditsState implements State, Observer {
 
     @Override
     public void Update(Observable observable, Object sender) {
+        //Obserbable meldet eine Veränderung
         if (observable instanceof MouseClick) {
             MouseClick mouseC = (MouseClick) observable;
+            //bei Mausklicks
             if (back.intersects(mouseC.getPosition())){
                 back.click();
             }
         }else if (observable instanceof MouseHover){
+            //Bei Mausbewegungen
             MouseHover mouseHover = (MouseHover) observable;
             back.hover(mouseHover.getPosition());
         }

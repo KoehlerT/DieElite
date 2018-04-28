@@ -9,22 +9,24 @@ import com.quickmathstudios.dieelite.game.rooms.Room;
 import com.quickmathstudios.dieelite.input.MouseClick;
 import com.quickmathstudios.dieelite.utillity.Observable;
 import com.quickmathstudios.dieelite.utillity.Observer;
-
+/**Kontrolliert die Spiellogik des aktuellen Raumes
+ * **/
 public class GameController implements Observer {
 
-    private DialogueController dialogueController;
+    private DialogueController dialogueController; //Für Dialoge
 
     public GameController(){
-        MouseClick.getInstance().addObserver(this);
-        Player.getInstance().setPosition(new Vector2(500,500));
+        MouseClick.getInstance().addObserver(this); //Objekt als Beobachter anmelden
+        Player.getInstance().setPosition(new Vector2(500,500)); //Spieler bewegen
         dialogueController = new DialogueController();
     }
     @Override
     public void Update(Observable observable, Object sender) {
+        //Observable meldet Veränderung
         if (sender instanceof MouseClick) {
             MouseClick mouseInfo = (MouseClick) sender;
             Vector2 cursor = mouseInfo.getPosition();
-            boolean hasInteracted = false;
+            boolean hasInteracted = false; //Scheint unwichtig zu sein, KA, was ich da gemacht habe
 
             //If Interactable -> Fokussieren
             Room current = RoomChanger.getInstance().getCurrent();

@@ -2,7 +2,12 @@ package com.quickmathstudios.dieelite.game.dialogueEngine;
 
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.Message;
 
+/**Informationen über Dialog
+ * Messages verweisen auf sich selbst und generieren einen Entscheidungs-Verweißbaum
+ * Die Nachricht die gerade angezeigt wird, wird hier gespeichert
+ * **/
 public class CurrentDialogue {
+    //Singleton
     private static CurrentDialogue ourInstance = new CurrentDialogue();
 
     public static CurrentDialogue getInstance() {
@@ -24,8 +29,9 @@ public class CurrentDialogue {
     }
 
     public void next(int choiceIndex){
-        if (current.getOptions().length > choiceIndex){
+        if (current.getOptions().length > choiceIndex){ //Check, ist Index Legal?
             current = current.getFollowing(choiceIndex);
+
         }
     }
 

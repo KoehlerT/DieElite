@@ -5,6 +5,9 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 import com.quickmathstudios.dieelite.game.interactables.Interactable;
 
+/**Spielerobjekt
+ * Hält informationen über den Spieler
+ * **/
 public class Player extends Sprite {
 
     //region Singleton

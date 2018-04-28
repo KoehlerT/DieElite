@@ -9,14 +9,20 @@ import com.quickmathstudios.dieelite.main.StateEngine;
 import com.quickmathstudios.dieelite.utillity.Action;
 import com.quickmathstudios.dieelite.utillity.hit.Button;
 
+/**Hält die Daten über das Menüobjekt
+ * **/
 public class MainMenu implements Disposable{
 
-    private Texture background;
+    private Texture background; //Hintegrund des Menüs
 
-    private Button[] btns = new Button[2];
+    private Button[] btns = new Button[2]; //Menübuttons
 
     public MainMenu(){
         background = new Texture("menu/background.png");
+
+        //Buttons werden instanziiert
+        //Bestehen aus Normaler Textur, Hover Textur, Position, Click-Aktion
+        //Play Button
         btns[0] = new Button(new Texture("menu/play_norm.png"),
                 new Texture("menu/play_hover.png"),
                 new Vector2(277, 386), new Action() {
@@ -25,6 +31,7 @@ public class MainMenu implements Disposable{
                 StateEngine.getInstance().SwitchState(new loadingState());
             }
         });
+        //Credits Button
         btns[1] = new Button(new Texture("menu/Credits_norm.png"),
                 new Texture("menu/Credits_hover.png"),
                 new Vector2(277, 276), new Action() {
@@ -36,6 +43,7 @@ public class MainMenu implements Disposable{
 
     }
 
+    //Getter
     public Texture getBackground(){
         return background;
     }
@@ -48,6 +56,7 @@ public class MainMenu implements Disposable{
 
     @Override
     public void dispose() {
+        //Arbeitsspeicher freigeben
         for (Button b : btns){
             b.dispose();
         }
