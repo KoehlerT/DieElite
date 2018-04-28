@@ -2,6 +2,7 @@ package com.quickmathstudios.dieelite.main;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.quickmathstudios.dieelite.loadingScreen.loadingState;
 import com.quickmathstudios.dieelite.utillity.State;
 
 public class StateEngine {
@@ -15,6 +16,9 @@ public class StateEngine {
     public StateEngine(){
         instance = this;
     }
+
+
+
 
     /**Schnittstelle zum Engineobjekt
      * Wird jeden Frame aufgerufen
@@ -31,7 +35,9 @@ public class StateEngine {
         float delta = Gdx.graphics.getDeltaTime();
         currentState.Update(delta); //Logik des States wird aktualisiert
         currentState.Render(b);  //Der aktuelle State wird angezeigt
+
     }
+
 
     /**Ändern des Gamestates
      * **/
@@ -40,11 +46,13 @@ public class StateEngine {
             currentState.dispose(); //Aktueller State wird aufgelöst -> Arbeitsspeicher freigeben
         }
         //Ändern des States
+        next.Show();
         currentState = next;
-        currentState.Show();
+
     }
 
     public void disposeEngine(){
-
+        currentState.dispose();
     }
+
 }

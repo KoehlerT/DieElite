@@ -22,6 +22,15 @@ public class loadingState implements State {
     //Hintergrund
     private Texture background;
 
+    //Fake Laden
+    State nextState;
+    private long loadingTime;
+
+    public loadingState(State nextState, long loadingTime){
+        this.nextState = nextState;
+        this.loadingTime = loadingTime;
+    }
+
     @Override
     public void Show() {
         background = new Texture("loadingback.png");
@@ -63,6 +72,6 @@ public class loadingState implements State {
         //State wird gewechselt, wenn 2s verstrichen sind
         //Das Laden des nächsten States fängt nach dem Beenden des loading-Screens statt
         //Der Loadingscreen ist komplett nutzlos!
-        StateEngine.getInstance().SwitchState(new GameState());
+        StateEngine.getInstance().SwitchState(nextState);
     }
 }
