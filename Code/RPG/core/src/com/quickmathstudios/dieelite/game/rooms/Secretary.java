@@ -16,7 +16,7 @@ public class Secretary extends Room {
         Interactable ranzen = new Ranzen(new Vector2(200, 200), new Action() {
             @Override
             public void act() {
-                RoomChanger.getInstance().changeRoom(new CorridorBase(new Vector2(100,100)));
+                RoomChanger.getInstance().changeRoom(new CorridorBase(new Vector2(100,100), (byte) 0b0000_0010));
             }
         });
         setInteractables(new Interactable[]{ranzen});

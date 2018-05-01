@@ -3,10 +3,12 @@ package com.quickmathstudios.dieelite.game.interactables;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 import com.quickmathstudios.dieelite.game.RoomChanger;
+import com.quickmathstudios.dieelite.game.StoryEngine;
 import com.quickmathstudios.dieelite.game.dialogueEngine.CurrentDialogue;
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.ActionMessage;
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.Message;
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.SimpleMessage;
+import com.quickmathstudios.dieelite.game.rooms.CorridorBase;
 import com.quickmathstudios.dieelite.game.rooms.Secretary;
 import com.quickmathstudios.dieelite.main.StateEngine;
 import com.quickmathstudios.dieelite.utillity.Action;
@@ -26,14 +28,14 @@ public class Traber extends Interactable{
 
     @Override
     public void interact() {
-        Message root = new Message("Grüß Gott",alias,
-                new Message[] {new SimpleMessage("VERWEIß",alias,null),new ActionMessage("Toll", alias, null, new Action() {
+        Message root = new Message("Grüß Gott, würdest du bitte Kreide holen?",alias,
+                new Message[] {new SimpleMessage("So wirst du das Abitur nie schaffen!",alias,null),new ActionMessage("Diese Arbeitshaltung, sehr löblich!", alias, null, new Action() {
                     @Override
                     public void act() {
-                        RoomChanger.getInstance().changeRoom(new Secretary());
+                        StoryEngine.getInstance().updateStory();
                     }
                 })},
-                new String[]{"Opfer","Hallo"});
+                new String[]{"Nein","Ja"});
         CurrentDialogue.getInstance().addDialogue(root);
     }
 

@@ -3,6 +3,7 @@ package com.quickmathstudios.dieelite.game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.quickmathstudios.dieelite.game.player.Player;
+import com.quickmathstudios.dieelite.game.rooms.Classroom1;
 import com.quickmathstudios.dieelite.game.rooms.CorridorBase;
 import com.quickmathstudios.dieelite.utillity.State;
 
@@ -17,6 +18,7 @@ public class GameState implements State {
     private GameRenderer gameRenderer;
     private GameController gameController;
     private Player player;
+    private StoryEngine storyEngine;
 
     @Override
     public void Show() {
@@ -24,7 +26,8 @@ public class GameState implements State {
         roomChanger = new RoomChanger();
         gameRenderer = new GameRenderer();
         gameController = new GameController();
-        roomChanger.changeRoom(new CorridorBase(new Vector2(500,50)));
+        roomChanger.changeRoom(new Classroom1());
+        storyEngine = new StoryEngine();
     }
 
     @Override

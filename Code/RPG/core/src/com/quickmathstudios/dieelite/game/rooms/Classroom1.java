@@ -11,12 +11,6 @@ public class Classroom1 extends Room {
     public Classroom1() {
         super("klassenraumback.png");
         Interactable traber = new Traber(new Vector2(100,200));
-        Interactable ranzen = new Ranzen(new Vector2(800, 200), new Action() {
-            @Override
-            public void act() {
-                RoomChanger.getInstance().changeRoom(new Secretary());
-            }
-        });
-        setInteractables(new Interactable[]{traber,ranzen});
+        setInteractables(new Interactable[]{traber});
     }
 }
