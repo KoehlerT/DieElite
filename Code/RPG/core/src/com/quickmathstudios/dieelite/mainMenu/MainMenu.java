@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Disposable;
 import com.quickmathstudios.dieelite.credits.CreditsState;
+import com.quickmathstudios.dieelite.game.GameState;
 import com.quickmathstudios.dieelite.loadingScreen.loadingState;
 import com.quickmathstudios.dieelite.main.StateEngine;
 import com.quickmathstudios.dieelite.utillity.Action;
@@ -28,7 +29,7 @@ public class MainMenu implements Disposable{
                 new Vector2(277, 386), new Action() {
             @Override
             public void act() {
-                StateEngine.getInstance().SwitchState(new loadingState());
+                StateEngine.getInstance().SwitchState(new loadingState(new GameState(),2000));
             }
         });
         //Credits Button
@@ -37,7 +38,7 @@ public class MainMenu implements Disposable{
                 new Vector2(277, 276), new Action() {
             @Override
             public void act() {
-                StateEngine.getInstance().SwitchState(new CreditsState());
+                StateEngine.getInstance().SwitchState(new loadingState(new CreditsState(),500));
             }
         });
 
