@@ -29,7 +29,6 @@ public class CurrentDialogue {
     }
 
     public void next(int choiceIndex){
-        //TODO: Bug wird aufgerufen obwohl kein Dialog
         if (current.getOptions().length > choiceIndex){ //Check, ist Index Legal?
             current = current.getFollowing(choiceIndex);
 
