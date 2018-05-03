@@ -33,6 +33,8 @@ public class RoomChanger {
 
     public void dispose(){
         //Arbeisspeicher freigbenen
+        current.dispose();
+        current = null;
         ourInstance = null; //Freigabe zum Garbage Collecten
     }
 }

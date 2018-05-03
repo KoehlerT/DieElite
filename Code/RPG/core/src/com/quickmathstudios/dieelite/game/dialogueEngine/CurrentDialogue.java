@@ -29,6 +29,8 @@ public class CurrentDialogue {
     }
 
     public void next(int choiceIndex){
+        if (current == null)
+            return;
         if (current.getOptions().length > choiceIndex){ //Check, ist Index Legal?
             current = current.getFollowing(choiceIndex);
 

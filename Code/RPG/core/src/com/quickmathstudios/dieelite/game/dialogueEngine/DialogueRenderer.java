@@ -11,11 +11,13 @@ public class DialogueRenderer {
 
     BitmapFont font;
     Texture dialogueBackgound;
+    Texture defaultAlias;
 
     public DialogueRenderer(){
         font = new BitmapFont();
         font.setColor(com.badlogic.gdx.graphics.Color.BLACK);
         dialogueBackgound = new Texture("dialogueBackground.png");
+        defaultAlias = new Texture("defaultAlias.png");
     }
 
     public void draw(SpriteBatch batch){
@@ -23,7 +25,8 @@ public class DialogueRenderer {
         if (toDisplay == null)
             return;
         batch.draw(dialogueBackgound,0,0);
-        batch.draw(toDisplay.getAlias(),50,50);
+        Texture alias = (toDisplay.getAlias() == null)?defaultAlias:toDisplay.getAlias();
+        batch.draw(alias,50,50);
         font.draw(batch,toDisplay.getContent(),200,100);
         //Draw Interaction Options
         String[] options = toDisplay.getOptions();

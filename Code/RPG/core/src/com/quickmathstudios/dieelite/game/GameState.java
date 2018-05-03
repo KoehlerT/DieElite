@@ -18,7 +18,6 @@ public class GameState implements State {
     private GameRenderer gameRenderer;
     private GameController gameController;
     private Player player;
-    private StoryEngine storyEngine;
 
     @Override
     public void Show() {
@@ -26,8 +25,7 @@ public class GameState implements State {
         roomChanger = new RoomChanger();
         gameRenderer = new GameRenderer();
         gameController = new GameController();
-        storyEngine = new StoryEngine();
-        storyEngine.updateStory();
+        StoryEngine.getInstance().updateStory();
     }
 
     @Override
@@ -45,6 +43,7 @@ public class GameState implements State {
     @Override
     public void dispose() {
         //Arbeitsspeicher freigeben
+        roomChanger.dispose();
         gameController.dispose();
         player.dispose();
     }
