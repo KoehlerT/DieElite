@@ -11,7 +11,7 @@ public abstract class Interactable {
 
     protected Hitable InteractionRadius; //Minimaler Radius für Interaktion
     protected Hitable ClickRadius;  //Hitbox für Mauscursor
-    protected Action interaction; //Funktion der Interaktion
+    private Action interaction; //Funktion der Interaktion
     protected Vector2 position; //Position (UL) der Grafik und Zentrum der Radien
 
     public Interactable(Hitable interactionBox, Hitable clickBox, Action action){

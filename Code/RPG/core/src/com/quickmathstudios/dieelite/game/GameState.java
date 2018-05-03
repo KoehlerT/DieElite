@@ -26,8 +26,8 @@ public class GameState implements State {
         roomChanger = new RoomChanger();
         gameRenderer = new GameRenderer();
         gameController = new GameController();
-        roomChanger.changeRoom(new Classroom1());
         storyEngine = new StoryEngine();
+        storyEngine.updateStory();
     }
 
     @Override

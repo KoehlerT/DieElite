@@ -17,7 +17,7 @@ public class Player extends Sprite {
 
     private Interactable target;
     private Vector2 aim;
-    private float speed = 200; //Pixel/sec
+    private float speed = 400; //Pixel/sec Eig. 200
 
     public Player(){
         super(new Texture("player.png"));

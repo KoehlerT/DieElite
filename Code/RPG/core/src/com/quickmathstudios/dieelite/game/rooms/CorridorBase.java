@@ -23,13 +23,13 @@ public class CorridorBase extends Room {
     private void initDoors(byte doorsactive){
         List<Interactable> doors = new LinkedList<Interactable>();
         if ((doorsactive | (byte) 0b1111_1110) == (byte)0b11111111) {
-            Interactable pfeilzuGar = new Arrow(new Vector2(400, 50), new Action() {
+            Interactable pfeilzuGar = new Arrow(new Vector2(600, 50), new Action() {
                 @Override
                 public void act() {
                     StoryEngine.getInstance().updateStory();
 
                 }
-            },"L");
+            },"U");
             doors.add(pfeilzuGar);
         } else if ((doorsactive | (byte) 0b1111_1101) == (byte)0b11111111) {
             Interactable pfeilzuSec = new Arrow(new Vector2(100, 150), new Action() {
@@ -41,23 +41,23 @@ public class CorridorBase extends Room {
             },"L");
             doors.add(pfeilzuSec);
         } else if ((doorsactive | (byte) 0b1111_1011) == (byte)0b11111111) {
-            Interactable pfeilzuClass = new Ranzen(new Vector2(400, 350), new Action() {
+            Interactable pfeilzuClass = new Arrow(new Vector2(600, 350), new Action() {
                 @Override
                 public void act() {
                     StoryEngine.getInstance().updateStory();
 
                 }
-            });
+            },"O");
             doors.add(pfeilzuClass);
 
         } else if ((doorsactive | (byte) 0b1111_0111) == (byte)0b11111111) {
-            Interactable pfeilzuClassiwo = new Ranzen(new Vector2(700, 150), new Action() {
+            Interactable pfeilzuClassiwo = new Arrow(new Vector2(1100, 150), new Action() {
                 @Override
                 public void act() {
                     StoryEngine.getInstance().updateStory();
 
                 }
-            });
+            },"R");
             doors.add(pfeilzuClassiwo);
         }
         Interactable[] doorArray = new Interactable[doors.size()];
