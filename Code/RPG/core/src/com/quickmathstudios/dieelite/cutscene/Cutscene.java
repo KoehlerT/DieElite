@@ -24,7 +24,7 @@ public class Cutscene implements Disposable {
 
         for (int i = 0; i < files.length; i++){
             File file = files[i];
-            if (file.getName().endsWith(".jpg")){
+            if (file.getName().endsWith(".jpg") || file.getName().endsWith(".png")){
                 textureList.add(new Texture(resourcePath+file.getName()));
             }
         }
@@ -42,6 +42,10 @@ public class Cutscene implements Disposable {
         currentTexture ++;
         //System.out.println(currentTexture+" "+textures.length+" "+(currentTexture < textures.length));
         return  (currentTexture < textures.length);
+    }
+
+    public void updateLogic(float time){
+
     }
 
     @Override

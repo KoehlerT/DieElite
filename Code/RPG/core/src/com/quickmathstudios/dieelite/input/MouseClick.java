@@ -15,6 +15,8 @@ public class MouseClick implements Observable {
 
     //Liste der Beobachtenden
     private List<Observer> observers = new LinkedList<Observer>();
+
+    private List<Observer> toAdd = new LinkedList<Observer>();
     
     private int x;
     private int y;
@@ -43,7 +45,7 @@ public class MouseClick implements Observable {
     //Observable
     @Override
     public void addObserver(Observer obs) {
-        observers.add(obs);
+        toAdd.add(obs);
     }
 
     @Override
@@ -63,6 +65,10 @@ public class MouseClick implements Observable {
 
     @Override
     public void notifyObservers() {
+        if (toAdd.size() > 0){
+            observers.addAll(toAdd);
+            toAdd.clear();
+        }
         for (Observer o : observers){
             if (o != null)
                 o.Update(this,this);

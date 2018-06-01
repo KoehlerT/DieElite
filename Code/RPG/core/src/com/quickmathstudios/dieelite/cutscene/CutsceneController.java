@@ -26,6 +26,10 @@ public class CutsceneController implements Observer, Disposable {
         }
     }
 
+    public void updateLogic(float time){
+        cutscene.updateLogic(time);
+    }
+
 
     @Override
     public void dispose() {

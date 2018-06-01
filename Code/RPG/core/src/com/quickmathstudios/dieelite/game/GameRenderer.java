@@ -1,6 +1,8 @@
 package com.quickmathstudios.dieelite.game;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.quickmathstudios.dieelite.game.dialogueEngine.DialogueRenderer;
 import com.quickmathstudios.dieelite.game.interactables.Interactable;
 import com.quickmathstudios.dieelite.game.player.Player;
@@ -24,7 +26,11 @@ public class GameRenderer {
 
         //Interactables
         Interactable[] ints = toRender.getInteractables();
-        for( Interactable i : ints) batch.draw(i.getTexture(), i.getPosition().x,i.getPosition().y);
+        for( Interactable i : ints){
+            TextureRegion tr = i.getTexture();
+            if (tr != null)
+                batch.draw(tr, i.getPosition().x,i.getPosition().y);
+        }
 
         //Dialogues
         dialogueRenderer.draw(batch);

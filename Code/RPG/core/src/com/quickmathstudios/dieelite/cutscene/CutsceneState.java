@@ -27,7 +27,7 @@ public class CutsceneState implements State {
 
     @Override
     public void Update(float delta) {
-
+        controller.updateLogic(delta);
     }
 
     @Override

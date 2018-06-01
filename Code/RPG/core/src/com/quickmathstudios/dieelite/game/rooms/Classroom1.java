@@ -10,7 +10,7 @@ import com.quickmathstudios.dieelite.utillity.Action;
 
 public class Classroom1 extends Room {
     public Classroom1() {
-        super("klassenraumback.png");
+        super("rooms/classroom.png");
         int dstep = 1;
         if (StoryEngine.getInstance().getStep() <= 2)
             dstep = 0;

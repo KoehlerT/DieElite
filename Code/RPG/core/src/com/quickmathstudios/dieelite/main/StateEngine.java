@@ -49,6 +49,8 @@ public class StateEngine {
         next.Show();
         currentState = next;
 
+
+        System.out.println("Switched State to: "+currentState);
     }
 
     public void disposeEngine(){

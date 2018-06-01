@@ -21,9 +21,9 @@ public class Traber extends Interactable{
     Message dialog;
 
     public Traber(Vector2 position, int dialogOption){
-        super(new HitBox(position,new Vector2(position.x+100,position.y+200)),
+        super(new Texture("traber.png"),
+                new HitBox(position,new Vector2(position.x+100,position.y+200)),
                 new HitBox(position,new Vector2(position.x+100,position.y+200)),null);
-        t = new Texture("traber.png");
         alias = new Texture("traberAlias.png");
         this.position = position;
         getDialog(dialogOption);
@@ -61,14 +61,10 @@ public class Traber extends Interactable{
         CurrentDialogue.getInstance().addDialogue(dialog);
     }
 
-    @Override
-    public Texture getTexture() {
-        return t;
-    }
 
     @Override
     public void dispose(){
-        t.dispose();
+        super.dispose();
         alias.dispose();
     }
 }

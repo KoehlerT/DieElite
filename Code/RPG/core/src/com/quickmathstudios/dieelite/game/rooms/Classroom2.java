@@ -15,14 +15,14 @@ public class Classroom2 extends Room {
 
 
     public Classroom2() {
-        super("klassenraumback.png");
+        super("rooms/classroom.png");
 
         Interactable bernweich = new Bernweich(new Vector2(100,200));
         Interactable door = new Arrow(new Vector2(100, 30), new Action() {
             @Override
             public void act() {
                 int step = StoryEngine.getInstance().getStep();
-                if (step <= 1){
+                if (step <= 0){
                     //Rätsel noch nicht bestanden
                     CurrentDialogue.getInstance().addDialogue(new SimpleMessage("Du bist noch nicht Fertig!",null,null));
                 }else {

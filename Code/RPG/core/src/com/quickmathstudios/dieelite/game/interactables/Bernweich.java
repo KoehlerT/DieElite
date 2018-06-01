@@ -15,13 +15,13 @@ import com.quickmathstudios.dieelite.utillity.hit.Hitable;
 
 public class Bernweich extends Interactable{
 
-    Texture texture = new Texture("bernweich.png");
     Texture alias = new Texture("bernweichAlias.png");
 
     Message dialog;
 
     public Bernweich(Vector2 position) {
-        super(new HitBox(position,new Vector2(position.x+75,position.y+150)),
+        super(new Texture("bernweich.png"),
+                new HitBox(position,new Vector2(position.x+75,position.y+150)),
                 new HitBox(position,new Vector2(position.x+50,position.y+100)), null);
         this.position = position;
 
@@ -39,6 +39,7 @@ public class Bernweich extends Interactable{
                                     @Override
                                     public void act() {
                                         StoryEngine.getInstance().updateStory();
+                                        System.out.println("Geredet mit BW");
                                     }
                                 }))
                 }, new String[]{"r^2","2rpi^2","pi*r^2"});
@@ -58,14 +59,10 @@ public class Bernweich extends Interactable{
         CurrentDialogue.getInstance().addDialogue(dialog);
     }
 
-    @Override
-    public Texture getTexture() {
-        return texture;
-    }
 
     @Override
     public void dispose() {
-        texture.dispose();
+        super.dispose();
         alias.dispose();
     }
 }

@@ -49,6 +49,7 @@ public class GameController implements Observer {
     }
 
     private Vector2 move = new Vector2();
+
     public void UpdateLogic(float delta){
         Player player = Player.getInstance();
         //Player bewegen
@@ -70,6 +71,15 @@ public class GameController implements Observer {
                 player.setTarget(null);
             }
         }
+
+        //Animation
+        if (RoomChanger.getInstance() != null){
+            Interactable[] ints = RoomChanger.getInstance().getCurrent().getInteractables();
+            for (Interactable i : ints){
+                i.updateAnimation(delta);
+            }
+        }
+
     }
 
     public void dispose(){

@@ -25,7 +25,7 @@ public class Secretary extends Room {
 
         Vector2 chalkPosition = new Vector2(800,75);
 
-        Interactable chalk = new Interactable(new HitBox(chalkPosition, new Vector2(chalkPosition.x+30,chalkPosition.y+60)),
+        Interactable chalk = new Interactable(new Texture("objects/chalk.png"),new HitBox(chalkPosition, new Vector2(chalkPosition.x+30,chalkPosition.y+60)),
                 new HitBox(chalkPosition, new Vector2(chalkPosition.x+50,chalkPosition.y+80)),
                 new Action(){
                     @Override
@@ -34,21 +34,9 @@ public class Secretary extends Room {
                     }
                 }){
 
-            private Texture texture = new Texture("objects/chalk.png");
-
             @Override
             public Vector2 getPosition() {
                 return chalkPosition;
-            }
-
-            @Override
-            public Texture getTexture() {
-                return texture;
-            }
-
-            @Override
-            public void dispose() {
-                texture.dispose();
             }
         };
 
