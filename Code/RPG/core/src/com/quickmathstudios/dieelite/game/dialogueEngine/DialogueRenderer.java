@@ -38,5 +38,6 @@ public class DialogueRenderer {
 
     public void dispose(){
         dialogueBackgound.dispose();
+        defaultAlias.dispose();
     }
 }

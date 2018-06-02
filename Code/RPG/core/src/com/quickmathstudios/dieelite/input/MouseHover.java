@@ -28,6 +28,7 @@ public class MouseHover implements Observable {
 
     //Position wird Aktualisiert
     void updateCoordinates(int x, int y){
+
         position.x = x;
         position.y = y;
         notifyObservers();

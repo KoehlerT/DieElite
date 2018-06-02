@@ -2,7 +2,9 @@ package com.quickmathstudios.dieelite.game.interactables;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
+import com.quickmathstudios.dieelite.game.StoryEngine;
 import com.quickmathstudios.dieelite.game.dialogueEngine.CurrentDialogue;
+import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.ActionMessage;
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.Message;
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.SimpleMessage;
 import com.quickmathstudios.dieelite.utillity.Action;
@@ -21,7 +23,33 @@ public class Butter extends Interactable {
     }
 
     private Message getDialogue(){
-        Message root = new SimpleMessage("Ruder Kevin",alias,null);
+        Message root = new ActionMessage("Ruder Kevin", alias, null, new Action() {
+            @Override
+            public void act() {
+                StoryEngine.getInstance().updateStory(1);
+            }
+        });
+
+        if (StoryEngine.getInstance().getStep() > 1){
+            //Ruderspiel fertig!
+            if (StoryEngine.getInstance().getBranch() == 0){
+                root = new ActionMessage("OMG, bsit du schlecht! Komm Freitag nach dem Unterricht in mein Büro", alias, null, new Action() {
+                    @Override
+                    public void act() {
+                        StoryEngine.getInstance().updateStory();
+                    }
+                });
+            }else{
+                root = new ActionMessage("OMG, ich bin beeindruckt! Komm Freitag nach dem Unterricht in mein Büro", alias, null, new Action() {
+                    @Override
+                    public void act() {
+                        StoryEngine.getInstance().updateStory();
+                    }
+                });
+            }
+        }
+
+
 
         return root;
     }

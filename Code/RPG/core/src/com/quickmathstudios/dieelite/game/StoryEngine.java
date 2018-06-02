@@ -1,12 +1,15 @@
 package com.quickmathstudios.dieelite.game;
 
 import com.badlogic.gdx.math.Vector2;
+import com.quickmathstudios.dieelite.credits.CreditsState;
 import com.quickmathstudios.dieelite.cutscene.Cutscene;
 import com.quickmathstudios.dieelite.cutscene.CutsceneState;
 import com.quickmathstudios.dieelite.cutscene.MovieCutscene;
 import com.quickmathstudios.dieelite.game.rooms.*;
 import com.quickmathstudios.dieelite.loadingScreen.loadingState;
 import com.quickmathstudios.dieelite.main.StateEngine;
+import com.quickmathstudios.dieelite.mainMenu.MenuScreen;
+import com.quickmathstudios.dieelite.minigames.rowing.RowingState;
 import com.quickmathstudios.dieelite.utillity.State;
 
 public class StoryEngine {
@@ -17,7 +20,8 @@ public class StoryEngine {
     }
 
     private int step = -1;
-    private int chapter = 0;
+    private int chapter = 6;
+    private int branch = 0; //Branch = 1: Gutes Ergebnis, //Branch = 2: schlechtes Ergebnis
 
     private StoryEngine() {
         ourInstance = this;
@@ -124,6 +128,71 @@ public class StoryEngine {
             if (step == 0){
                 RoomChanger.getInstance().changeRoom(new Boathouse());
             }
+
+            if (step == 1){
+                //Mit herr Büttner geredet
+            }
+
+            if (step == 2){
+                //Ruderminigame
+                System.out.println("Load Minigame");
+                StateEngine.getInstance().SwitchState(new loadingState(new RowingState(),1000));
+            }
+
+            if (step == 3){
+                //Zurück vom Rundern
+                StateEngine.getInstance().SwitchState(new GameState());
+            }
+            if (step == 4){
+                RoomChanger.getInstance().changeRoom(new Boathouse());
+            }if (step == 5){
+                //Mit Herr Butter geredet
+                chapter = 7;
+                step = -1;
+                System.out.println("HI");
+                updateStory();
+            }
+        }else if (chapter == 7){
+            if (step == 0) {
+                StateEngine.getInstance().SwitchState(new CutsceneState(new Cutscene("chapter8")));
+            }
+            if (step == 1){
+                //Cutscene beendet
+                StateEngine.getInstance().SwitchState(new GameState());
+            }
+            if (step ==2){
+                //Ab in den nächsten Raum
+                RoomChanger.getInstance().changeRoom(new CorridorBase(new Vector2(1000,200),(byte)0b0000_0010));
+            }
+            if (step == 3){
+                //Büro Laden
+                chapter = 8;
+                step = -1;
+                updateStory();
+            }
+
+        }else if (chapter == 8){
+            if (branch == 0){
+                if (step == 0){
+                    //Herr Butters Büro mit Fragen
+                    System.out.println("FRAGEN");
+                    RoomChanger.getInstance().changeRoom(new ButterOffice());
+                }
+            }
+            if (branch == 1){
+                if (step == 1){
+                    //Herr Butters Büro mit Opferritual
+                    System.out.println("OFER");
+                    StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/10f)),1000));
+                }
+
+                if (step == 2){
+                    chapter = 0;
+                    step = -1;
+                    branch = 0;
+                    StateEngine.getInstance().SwitchState(new loadingState(new CreditsState(),1000));
+                }
+            }
         }
 
 
@@ -134,6 +203,20 @@ public class StoryEngine {
         step++;
         this.getstoryState();
 
+    }
+
+    public void updateStory(int step){
+        System.out.println(chapter+"/"+step);
+        this.step = step;
+        this.getstoryState();
+    }
+
+    public void setBranch(int branch){
+        this.branch = branch;
+    }
+
+    public int getBranch(){
+        return branch;
     }
 
     public int getChapter() {
