@@ -15,10 +15,8 @@ public class Butter extends Interactable {
 
     public Butter(Vector2 position){
         super(new Texture("entities/butter.png"),
-                new HitBox(position, new Vector2(100, 200).add(position)),
-                new HitBox(position, new Vector2(150, 250).add(position)),
+                position,
                 null);
-        this.position = position;
         alias = new Texture("entities/butterAlias.png");
     }
 

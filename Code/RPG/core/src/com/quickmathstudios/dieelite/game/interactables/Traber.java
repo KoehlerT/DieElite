@@ -22,10 +22,8 @@ public class Traber extends Interactable{
 
     public Traber(Vector2 position, int dialogOption){
         super(new Texture("traber.png"),
-                new HitBox(position,new Vector2(position.x+100,position.y+200)),
-                new HitBox(position,new Vector2(position.x+100,position.y+200)),null);
+                position,null);
         alias = new Texture("traberAlias.png");
-        this.position = position;
         getDialog(dialogOption);
     }
 

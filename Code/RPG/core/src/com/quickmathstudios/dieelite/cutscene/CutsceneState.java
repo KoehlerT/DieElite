@@ -31,8 +31,14 @@ public class CutsceneState implements State {
     }
 
     @Override
+    public boolean load() {
+        return scene.load();
+    }
+
+    @Override
     public void dispose() {
         scene.dispose();
         controller.dispose();
+        renderer.dispose();
     }
 }

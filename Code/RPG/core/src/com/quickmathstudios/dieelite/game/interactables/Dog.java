@@ -37,7 +37,7 @@ public class Dog extends Interactable {
     public void updateAnimation(float delta) {
         animationTime += delta;
 
-        //Berechne Bewegungsvektor
+        //Berechne Bewegungsvektor -> Müsste in Control-Klasse stehen, Ausnahmen bestätigen die Regel
         move.set(finish);
         move.sub(position);
         move.setLength(1);

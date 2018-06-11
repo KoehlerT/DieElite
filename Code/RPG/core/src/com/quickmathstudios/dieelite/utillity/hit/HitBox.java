@@ -15,7 +15,7 @@ public class HitBox implements Hitable {
 
     @Override
     public boolean intersects(Vector2 curs) {
-        return (curs.x > start.x && curs.x < end.x && curs.y > start.y && curs.y < end.y);
+        return (curs.x >= start.x && curs.x <= end.x && curs.y >= start.y && curs.y <= end.y);
     }
 
     public boolean intersects(HitBox other){

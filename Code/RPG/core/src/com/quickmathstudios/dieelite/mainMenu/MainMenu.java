@@ -29,7 +29,7 @@ public class MainMenu implements Disposable{
                 new Vector2(277, 386), new Action() {
             @Override
             public void act() {
-                StateEngine.getInstance().SwitchState(new loadingState(new GameState(),2000));
+                StateEngine.getInstance().SwitchState(new loadingState(new GameState(),2));
             }
         });
         //Credits Button
@@ -38,7 +38,7 @@ public class MainMenu implements Disposable{
                 new Vector2(277, 276), new Action() {
             @Override
             public void act() {
-                StateEngine.getInstance().SwitchState(new loadingState(new CreditsState(),500));
+                StateEngine.getInstance().SwitchState(new loadingState(new CreditsState(),3));
             }
         });
 

@@ -27,6 +27,11 @@ public class RowingState implements State {
     }
 
     @Override
+    public boolean load() {
+        return true;
+    }
+
+    @Override
     public void dispose() {
         game.dispose();
         controller.dispose();

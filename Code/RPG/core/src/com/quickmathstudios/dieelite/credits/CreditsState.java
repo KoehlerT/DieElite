@@ -45,6 +45,11 @@ public class CreditsState implements State, Observer {
     }
 
     @Override
+    public boolean load() {
+        return true;
+    }
+
+    @Override
     public void Render(SpriteBatch batch) {
         //Hintergrund wird angezeigt
         batch.draw(background,0,0);

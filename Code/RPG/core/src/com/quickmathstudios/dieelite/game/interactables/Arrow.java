@@ -11,10 +11,8 @@ public class Arrow extends Interactable{
 
     public Arrow(Vector2 position, Action interact,String direction){
         super(new Texture("misc/arrow"+direction+".png"),
-                new HitBox(position,new Vector2(position.x+100,position.y+100)),
-                new HitBox(new Vector2(position.x-20,position.y-20),new Vector2(position.x+100,position.y+100)),
+                position,
                 interact);
-        this.position = position;
         this.interact = interact;
     }
 

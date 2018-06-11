@@ -33,9 +33,9 @@ public class loadingState implements State {
 
     @Override
     public void Show() {
-        background = new Texture("loadingback.png");
+        background = new Texture("misc/loadingback.png");
         //Animation
-        spriteSheet = new Texture("loadingSheet.png");
+        spriteSheet = new Texture("misc/loadingSheet.png");
         //Sprietesheet wird in einzeltexturen zerlegt
         TextureRegion[] tr = TextureRegion.split(spriteSheet,
                 spriteSheet.getWidth()/8,
@@ -49,7 +49,10 @@ public class loadingState implements State {
         //Anzeigen des Hintergrundes
         batch.draw(background,0,0);
         //Anzeigen der Animation
-        batch.draw(animation.getKeyFrame(time,true),1100,100);
+        batch.draw(animation.getKeyFrame(time,true),1000,75);
+        batch.draw(animation.getKeyFrame(time,true),125,75);
+        batch.draw(animation.getKeyFrame(time,true),125,635);
+        batch.draw(animation.getKeyFrame(time,true),1000,635);
     }
 
     @Override
@@ -57,9 +60,14 @@ public class loadingState implements State {
         time+=delta;
 
         //Wenn die Zeit reif ist, wird der nächste Schritt geladen
-        if (time >= 2){
+        if (time >= loadingTime && nextState.load()){
             finished();
         }
+    }
+
+    @Override
+    public boolean load() {
+        return true;
     }
 
     @Override

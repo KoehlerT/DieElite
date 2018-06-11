@@ -15,11 +15,9 @@ public class Ranzen extends Interactable {
 
     public Ranzen(Vector2 position, Action interact){
         super(new Texture("ranzen.png"),
-                new HitBox(position,new Vector2(position.x+100,position.y+100)),
-                new HitBox(position,new Vector2(position.x+100,position.y+100)),
+                position,
                 interact);
 
-        this.position = position;
         this.interact = interact;
     }
 

@@ -9,6 +9,7 @@ import com.quickmathstudios.dieelite.minigames.rowing.swimming.Chainsaw;
 import com.quickmathstudios.dieelite.minigames.rowing.swimming.Fish;
 import com.quickmathstudios.dieelite.minigames.rowing.swimming.SwimmingObject;
 
+import javax.xml.soap.Text;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,7 +27,9 @@ class FrameLocation{
 public class Minigame implements Disposable {
 
     private Texture background;
+    private Texture message;
     private float animationTime = 0f;
+    private boolean started = false;
 
     private PlayerFish player;
     private int Score = 0;
@@ -36,6 +39,7 @@ public class Minigame implements Disposable {
 
     public Minigame(){
         background = new Texture("minigames/row/background.jpg");
+        message = new Texture("minigames/row/message.png");
         player = new PlayerFish();
     }
 
@@ -72,6 +76,11 @@ public class Minigame implements Disposable {
     }
 
     public FrameLocation[] getFrameLocations(){
+        if (!started){
+            //Display Message (Super Transparent!)
+            return new FrameLocation[]{new FrameLocation(TextureRegion.split(message,message.getWidth(),message.getHeight())[0][0],new Vector2(250,300))};
+        }
+
         FrameLocation[] result = new FrameLocation[1+swimmingObjects.size()];
 
         result[0] = new FrameLocation(player.getTextureRegion(animationTime),player.getLocation());
@@ -87,8 +96,20 @@ public class Minigame implements Disposable {
         return Score;
     }
 
+    public boolean running(){
+        return started;
+    }
+
+    public void start(){
+        started = true;
+    }
+
     @Override
     public void dispose() {
         player.dispose();
+        message.dispose();
+        for(int i = 0; i < swimmingObjects.size(); i++){
+            swimmingObjects.get(i).dispose();
+        }
     }
 }

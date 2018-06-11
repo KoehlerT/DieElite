@@ -32,6 +32,11 @@ public class MenuScreen implements State {
     }
 
     @Override
+    public boolean load() {
+        return true;
+    }
+
+    @Override
     public void dispose() {
         contr.dispose();
         menu.dispose();

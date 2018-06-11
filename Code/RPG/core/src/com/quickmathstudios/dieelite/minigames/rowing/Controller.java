@@ -3,6 +3,7 @@ package com.quickmathstudios.dieelite.minigames.rowing;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Disposable;
 import com.quickmathstudios.dieelite.game.StoryEngine;
+import com.quickmathstudios.dieelite.input.MouseClick;
 import com.quickmathstudios.dieelite.input.MouseHover;
 import com.quickmathstudios.dieelite.minigames.rowing.swimming.SwimmingObject;
 import com.quickmathstudios.dieelite.utillity.Observable;
@@ -15,7 +16,7 @@ public class Controller implements Disposable, Observer {
 
     private static final float fischProSek = 1f;
     private static final float playTime = 60;
-    private static final int mark = -200;
+    private static final int mark = 20;
 
     Minigame toControl;
     private double runtime = 0;
@@ -24,12 +25,18 @@ public class Controller implements Disposable, Observer {
     Controller(Minigame minigame){
         toControl = minigame;
         MouseHover.getInstance().addObserver(this);
+        MouseClick.getInstance().addObserver(this);
 
         toControl.SpawnObject(0);
         toControl.SpawnObject(1);
     }
 
     public void UpdateLogic(float delta){
+        if (!toControl.running()) {
+            return;//Solange nicht gestartet
+        }
+
+
         runtime += delta;
 
         toControl.incrementAnimationtime(delta);
@@ -108,6 +115,7 @@ public class Controller implements Disposable, Observer {
     @Override
     public void dispose() {
         MouseHover.getInstance().deleteObserver(this);
+        MouseClick.getInstance().deleteObserver(this);
     }
 
     private long lastMove = 0;
@@ -130,11 +138,17 @@ public class Controller implements Disposable, Observer {
             //Calculate Speed
             dist.set(position).sub(lastPosition); //Vektor der Distanz errechnen
             float length = dist.y; //Länge des Vektors (nur Vertikale Komponente)
-            float time = (float)(System.nanoTime()-lastMove)/1_000_000_000f; //Die Zeit, in der die Länge zurückgelegt wurde
+            float time = (float)(System.nanoTime()-lastMove)/1000000000f; //Die Zeit, in der die Länge zurückgelegt wurde
             speed = length/time;//-> Geschwindigkeit
             toControl.getPlayer().addSpeed(Math.abs(speed)*0.00001f); //Geschwindikeit ein bisschen runterskaliert -> Schwerer
             lastPosition.set(position); //Für nächste Berechnung vorbereiten
             lastMove = System.nanoTime();//Für nächste Berechnung vorbeoereiten
+        }
+
+        if (observable instanceof MouseClick) {
+            if (!toControl.running())
+                toControl.start();
+
         }
     }
 }

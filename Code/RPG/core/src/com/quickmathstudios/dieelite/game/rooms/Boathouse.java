@@ -18,13 +18,8 @@ public class Boathouse extends Room {
         ints[0] = new Butter(new Vector2(100,300));
         Vector2 ergometerPos = new Vector2(800,350);
         ints[1] = new Interactable(new Texture("objects/ergometer.png"),
-                new HitBox(ergometerPos,new Vector2(300,100).add(ergometerPos)),
-                new HitBox(ergometerPos,new Vector2(400,200).add(ergometerPos)),
+                ergometerPos,
                 null) {
-            @Override
-            protected void setPosition() {
-                position = ergometerPos;
-            }
 
             @Override
             public void interact() {

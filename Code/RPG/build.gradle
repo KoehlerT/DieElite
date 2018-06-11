@@ -1,6 +1,17 @@
-buildscript {
-    
 
+idea {
+    module {
+        downloadJavadoc = false    
+        downloadSources = true
+    }
+	project {
+        languageLevel = '1.8'
+    }
+}
+
+buildscript {
+    apply plugin: 'idea'
+    
     repositories {
         mavenLocal()
         mavenCentral()

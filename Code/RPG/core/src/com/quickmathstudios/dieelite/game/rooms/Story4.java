@@ -23,10 +23,9 @@ public class Story4 extends Room {
         manu = new Manu(new Vector2(900,200));
         trash[0] = manu;
 
-        Vector2 iceTeapos = new Vector2(r.nextInt(500)+100,r.nextInt(300)+50);
+        Vector2 iceTeapos = new Vector2(r.nextInt(100)+100,r.nextInt(300)+50);
         trash[1] = new Interactable(new Texture("objects/icetea.png"),
-                new HitBox(iceTeapos, new Vector2(50,50).add(iceTeapos)),
-                new HitBox(new Vector2(-50,-50).add(iceTeapos), new Vector2(100,100).add(iceTeapos)),
+                iceTeapos,
                 new Action() {
                     @Override
                     public void act() {
@@ -34,27 +33,18 @@ public class Story4 extends Room {
                         ActivateManu();
                     }
                 }){
-            @Override
-            protected void setPosition() {
-                position = iceTeapos;
-            }
+
         };
 
         for (int i = 2; i < trash.length; i++){
-            Vector2 trashPos = new Vector2(r.nextInt(1000)+100,r.nextInt(300)+50);
+            Vector2 trashPos = new Vector2(r.nextInt(650)+200,r.nextInt(300)+50);
 
             trash[i] = new Interactable(new Texture("objects/trash.png"),
-                    new HitBox(trashPos,new Vector2(50,50).add(trashPos)),
-                    new HitBox(trashPos,new Vector2(100,100).add(trashPos)),null) {
+                    trashPos,null) {
                 @Override
                 public void interact() {
                     texture = null;
                     tr = null;
-                }
-
-                @Override
-                protected void setPosition() {
-                    position = trashPos;
                 }
             };
         }

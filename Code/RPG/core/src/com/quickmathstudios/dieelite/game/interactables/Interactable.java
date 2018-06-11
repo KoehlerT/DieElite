@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 import com.quickmathstudios.dieelite.utillity.Action;
+import com.quickmathstudios.dieelite.utillity.hit.HitBox;
 import com.quickmathstudios.dieelite.utillity.hit.Hitable;
 
 import javax.xml.bind.ValidationException;
@@ -20,18 +21,16 @@ public abstract class Interactable {
     protected Texture texture;
     protected TextureRegion tr;
 
-    public Interactable(Texture t,Hitable interactionBox, Hitable clickBox, Action action){
-        InteractionRadius = interactionBox;
-        ClickRadius = clickBox;
+    public Interactable(Texture t, Vector2 position, Action action){
+        InteractionRadius = new HitBox(new Vector2(-25,-25).add(position),
+                new Vector2(t.getWidth()+50,t.getHeight()+50).add(position));
+        ClickRadius = new HitBox(new Vector2(-50,-50).add(position),new Vector2(t.getWidth()+50,t.getHeight()+50).add(position));
         interaction = action;
         tr = TextureRegion.split(t,t.getWidth(),t.getHeight())[0][0];
-        setPosition();
+        this.position = position;
     }
 
     public Interactable(){}
-    protected void setPosition(){
-        this.position = null;
-    }
 
     //INteraktionsmethode muss überschrieben werden
     public void interact(){
@@ -46,7 +45,8 @@ public abstract class Interactable {
     }
 
     public boolean isClicked(Vector2 cursorPos){
-        return ClickRadius.intersects(cursorPos);
+        return inRadius(cursorPos);
+        //return ClickRadius.intersects(cursorPos);
     }
 
     //Getter

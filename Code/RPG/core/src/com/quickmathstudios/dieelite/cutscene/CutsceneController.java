@@ -2,6 +2,9 @@ package com.quickmathstudios.dieelite.cutscene;
 
 import com.badlogic.gdx.utils.Disposable;
 import com.quickmathstudios.dieelite.game.StoryEngine;
+import com.quickmathstudios.dieelite.game.dialogueEngine.CurrentDialogue;
+import com.quickmathstudios.dieelite.game.dialogueEngine.DialogueController;
+import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.SimpleMessage;
 import com.quickmathstudios.dieelite.input.MouseClick;
 import com.quickmathstudios.dieelite.utillity.Observable;
 import com.quickmathstudios.dieelite.utillity.Observer;
@@ -24,6 +27,19 @@ public class CutsceneController implements Observer, Disposable {
                 StoryEngine.getInstance().updateStory();
             }
         }
+
+        String message = cutscene.getMessage();
+        if (message!= null)
+            workMessage(message);
+    }
+
+    private void workMessage(String msg){
+        if (msg.contains("STOP")){
+            CurrentDialogue.getInstance().addDialogue(null);
+        }else {
+            CurrentDialogue.getInstance().addDialogue(new SimpleMessage(msg, null, null));
+        }
+
     }
 
     public void updateLogic(float time){

@@ -23,7 +23,7 @@ public class Manu extends Interactable {
     Message dialogue;
 
     public Manu(Vector2 position) {
-        InteractionRadius = new HitBox(position,new Vector2(50,100).add(position));
+        InteractionRadius = new HitBox(new Vector2(-25,-25).add(position),new Vector2(50,100).add(position));
         ClickRadius = new HitBox(new Vector2(-50,-50).add(position),new Vector2(130,230).add(position));
         texture = new Texture("entities/manu.png");
         TextureRegion[] trs =  TextureRegion.split(texture,texture.getWidth()/2,texture.getHeight())[0];

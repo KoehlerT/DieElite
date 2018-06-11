@@ -8,9 +8,7 @@ import com.quickmathstudios.dieelite.cutscene.MovieCutscene;
 import com.quickmathstudios.dieelite.game.rooms.*;
 import com.quickmathstudios.dieelite.loadingScreen.loadingState;
 import com.quickmathstudios.dieelite.main.StateEngine;
-import com.quickmathstudios.dieelite.mainMenu.MenuScreen;
 import com.quickmathstudios.dieelite.minigames.rowing.RowingState;
-import com.quickmathstudios.dieelite.utillity.State;
 
 public class StoryEngine {
     private static StoryEngine ourInstance = new StoryEngine();
@@ -20,8 +18,8 @@ public class StoryEngine {
     }
 
     private int step = -1;
-    private int chapter = 6;
-    private int branch = 0; //Branch = 1: Gutes Ergebnis, //Branch = 2: schlechtes Ergebnis
+    private int chapter = 1;
+    private int branch = 0; //Branch = 1: Gutes Ergebnis, //Branch = 0: schlechtes Ergebnis
 
     private StoryEngine() {
         ourInstance = this;
@@ -70,22 +68,22 @@ public class StoryEngine {
              */
             if (step == 0){
                 System.out.println("Chp 3");
-                StateEngine.getInstance().SwitchState(
+                StateEngine.getInstance().SwitchState(new loadingState(
                         new CutsceneState(
                                 new Cutscene("chapter3")
-                        ));
+                        ),1));
             }
             if (step == 1){
                 System.out.println("Next chapter");
                 chapter = 3;
                 step = -1;
                 updateStory();
-                //StateEngine.getInstance().SwitchState(new loadingState(new GameState(),1000));
+                //StateEngine.getInstance().SwitchState(new loadingState(new GameState(),1));
             }
         }else if (chapter == 3){
             if (step == 0){
                 System.out.println("Story 4");
-                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter4",1f/24f)),1000));
+                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter4",1f/24f)),2));
 
             }
             if (step == 1){
@@ -136,7 +134,7 @@ public class StoryEngine {
             if (step == 2){
                 //Ruderminigame
                 System.out.println("Load Minigame");
-                StateEngine.getInstance().SwitchState(new loadingState(new RowingState(),1000));
+                StateEngine.getInstance().SwitchState(new loadingState(new RowingState(),1));
             }
 
             if (step == 3){
@@ -154,7 +152,7 @@ public class StoryEngine {
             }
         }else if (chapter == 7){
             if (step == 0) {
-                StateEngine.getInstance().SwitchState(new CutsceneState(new Cutscene("chapter8")));
+                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new Cutscene("chapter8")),3));
             }
             if (step == 1){
                 //Cutscene beendet
@@ -183,14 +181,14 @@ public class StoryEngine {
                 if (step == 1){
                     //Herr Butters Büro mit Opferritual
                     System.out.println("OFER");
-                    StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/10f)),1000));
+                    StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/10f)),3));
                 }
 
                 if (step == 2){
                     chapter = 0;
                     step = -1;
                     branch = 0;
-                    StateEngine.getInstance().SwitchState(new loadingState(new CreditsState(),1000));
+                    StateEngine.getInstance().SwitchState(new loadingState(new CreditsState(),2));
                 }
             }
         }

@@ -8,4 +8,5 @@ public interface State {
     public void Render(SpriteBatch batch);
     public void Update(float delta);
     public void dispose();
+    public boolean load();
 }

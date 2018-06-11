@@ -26,7 +26,7 @@ public class GameController implements Observer {
         if (sender instanceof MouseClick) {
             MouseClick mouseInfo = (MouseClick) sender;
             Vector2 cursor = mouseInfo.getPosition();
-            boolean hasInteracted = false; //Scheint unwichtig zu sein, KA, was ich da gemacht habe
+            boolean hasInteracted = false;
 
             //If Interactable -> Fokussieren
             Room current = RoomChanger.getInstance().getCurrent();
@@ -40,7 +40,7 @@ public class GameController implements Observer {
             }
 
             //Boden --> Bewegen
-            if (!hasInteracted){
+            if (!hasInteracted && !CurrentDialogue.getInstance().currentlyTalking()){
                 Player.getInstance().setAim(cursor);
                 Player.getInstance().setTarget(null);
             }
@@ -52,6 +52,15 @@ public class GameController implements Observer {
 
     public void UpdateLogic(float delta){
         Player player = Player.getInstance();
+
+        //Interactable Range -> Action
+        if (player.hasTarget()){
+            if (player.getTarget().inRadius(player.getPosition())){
+                player.getTarget().interact();
+                player.setTarget(null);
+            }
+        }
+
         //Player bewegen
         if (player.getAim() != null && !CurrentDialogue.getInstance().currentlyTalking()){
             move.set(player.getAim());
@@ -61,14 +70,6 @@ public class GameController implements Observer {
                 move.scl(player.getSpeed());
                 move.scl(delta);
                 player.setPosition(move.add(player.getPosition()));
-            }
-        }
-
-        //Interactable Range -> Action
-        if (player.hasTarget()){
-            if (player.getTarget().inRadius(player.getPosition())){
-                player.getTarget().interact();
-                player.setTarget(null);
             }
         }
 

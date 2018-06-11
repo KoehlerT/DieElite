@@ -41,10 +41,16 @@ public class GameState implements State {
     }
 
     @Override
+    public boolean load() {
+        return true;
+    }
+
+    @Override
     public void dispose() {
         //Arbeitsspeicher freigeben
         roomChanger.dispose();
         gameController.dispose();
         player.dispose();
+        gameRenderer.dispose();
     }
 }
