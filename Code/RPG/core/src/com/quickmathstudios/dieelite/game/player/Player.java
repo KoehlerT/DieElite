@@ -1,7 +1,9 @@
 package com.quickmathstudios.dieelite.game.player;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 import com.quickmathstudios.dieelite.game.interactables.Interactable;
 
@@ -18,11 +20,15 @@ public class Player extends Sprite {
     private Interactable target;
     private Vector2 aim;
     private float speed = 400; //Pixel/sec Eig. 200
+    Texture texture = new Texture("entities/kevin.png");
+    Animation<TextureRegion> animation;
 
     public Player(){
-        super(new Texture("player.png"));
+        super();
         instance = this;
 
+        TextureRegion[] trs = TextureRegion.split(texture,texture.getWidth()/4,texture.getHeight())[0];
+        animation = new Animation<TextureRegion>(1/8f, trs);
     }
 
     //Setter
@@ -44,6 +50,10 @@ public class Player extends Sprite {
 
     public Interactable getTarget() {
         return target;
+    }
+
+    public TextureRegion getRegion(float animationTime){
+        return animation.getKeyFrame(animationTime,true);
     }
 
     public void dispose(){

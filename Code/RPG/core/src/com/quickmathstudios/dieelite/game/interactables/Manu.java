@@ -18,18 +18,16 @@ public class Manu extends Interactable {
     Animation<TextureRegion> animation;
     private boolean visible = false;
     private float animationTime = 0f;
-    Texture alias;
 
     Message dialogue;
 
     public Manu(Vector2 position) {
-        InteractionRadius = new HitBox(new Vector2(-25,-25).add(position),new Vector2(50,100).add(position));
+        InteractionRadius = new HitBox(new Vector2(-25,-25).add(position),new Vector2(120,230).add(position));
         ClickRadius = new HitBox(new Vector2(-50,-50).add(position),new Vector2(130,230).add(position));
         texture = new Texture("entities/manu.png");
-        TextureRegion[] trs =  TextureRegion.split(texture,texture.getWidth()/2,texture.getHeight())[0];
+        TextureRegion[] trs =  TextureRegion.split(texture,texture.getWidth()/1,texture.getHeight())[0];
         animation = new Animation<TextureRegion>(0.25f,trs);
         this.position = position;
-        alias = new Texture("entities/manuAlias.png");
         constructDialogue();
     }
 
@@ -58,19 +56,18 @@ public class Manu extends Interactable {
     }
 
     private void constructDialogue(){
-        dialogue = new SimpleMessage("Du hast gerade einen Eistee weggeworfen",alias,
-                new SimpleMessage("Vom Pfand könnte ein Kind in Afrika 10 JAHRE überleben!!!!!",alias,
-                new ActionMessage("Bacon though", alias, null, new Action() {
+        dialogue = new SimpleMessage("WAS FÄLLT DIR EIN? Ein Kind in Afrika würde davon einen Tag lang \nleben können. Ich hab da so ne Applikation in diesem Playstore gefunden. \nDa könntest du die 40 Cent spenden und einem Kind einen Tag retten.\n Stattdessen schmeißt du es weg, du abgehobener Schnösel.","manu",
+                new Message("Aber so wie ich dich kenne ignorierst du es eh einfach. Weißt du, \nmanchmal erzähle ich Leuten was schlimmes mit Schweinen beim Schlachter passiert,\n aber die ignorieren dass einfach….","manu",
+                new Message[] {new ActionMessage("SOFORT WEG HIER!", "manu", null, new Action() {
                     @Override
                     public void act() {
                         StoryEngine.getInstance().updateStory();
                     }
-                })));
+                })},new String[] {"bacon, though"}));
     }
 
     @Override
     public void dispose() {
         super.dispose();
-        alias.dispose();
     }
 }

@@ -18,7 +18,7 @@ public class StoryEngine {
     }
 
     private int step = -1;
-    private int chapter = 1;
+    private int chapter = 0;
     private int branch = 0; //Branch = 1: Gutes Ergebnis, //Branch = 0: schlechtes Ergebnis
 
     private StoryEngine() {

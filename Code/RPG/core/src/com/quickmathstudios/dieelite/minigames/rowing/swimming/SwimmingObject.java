@@ -29,7 +29,7 @@ public abstract class SwimmingObject implements Disposable{
 
     public HitBox getHitbox() {
         hitbox.getUL().set(location);
-        hitbox.getOR().set(texture.getWidth(),texture.getHeight()).add(location);
+        hitbox.getOR().set(animation.getKeyFrame(0).getRegionWidth(),animation.getKeyFrame(0).getRegionHeight()).add(location);
         return hitbox;
     }
 

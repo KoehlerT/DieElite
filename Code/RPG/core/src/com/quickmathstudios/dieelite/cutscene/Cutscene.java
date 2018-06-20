@@ -40,10 +40,7 @@ public class Cutscene implements Disposable {
 
     private void getTextures(String resourcePath, int loaded){
         //System.out.println((int)files[0].toCharArray()[5]);
-
-
         for (int i = loaded; i < loaded + 10 && i < files.length; i++){
-            System.out.println(resourcePath+files[i]);
             textureList.add(new Texture(resourcePath+files[i]));
 
         }

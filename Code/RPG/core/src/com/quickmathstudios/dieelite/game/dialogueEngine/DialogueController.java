@@ -2,8 +2,11 @@ package com.quickmathstudios.dieelite.game.dialogueEngine;
 
 import com.badlogic.gdx.math.Vector2;
 import com.quickmathstudios.dieelite.input.MouseClick;
+import com.quickmathstudios.dieelite.input.MouseHover;
 import com.quickmathstudios.dieelite.utillity.Observable;
 import com.quickmathstudios.dieelite.utillity.Observer;
+
+import java.awt.event.MouseAdapter;
 
 /**Kontrolliert intaraktionen des Spielers mit dem Dialoginterface
  * **/
@@ -11,11 +14,13 @@ public class DialogueController implements Observer {
 
     public DialogueController(){
         MouseClick.getInstance().addObserver(this);
+        MouseHover.getInstance().addObserver(this);
     } //Mausklicks Beobachten
 
 
     public void dispose(){
         MouseClick.getInstance().deleteObserver(this);
+        MouseHover.getInstance().deleteObserver(this);
     } //Mausklick Beobachtung beenden
 
     @Override
@@ -24,13 +29,23 @@ public class DialogueController implements Observer {
             MouseClick mouseInfo = (MouseClick) observable;
             //Check, which option is clicked
             Vector2 cursor = mouseInfo.getPosition();
-            if (cursor.x > 950 && cursor.y < 150 && cursor.x<1150&&cursor.y>50){
-                //Cursor befindet sich in der Optionen box
-                int index = (int)((cursor.y-50)/25f); //Index Berechnen
-                index = 3-index; //Idex Invertieren
-                CurrentDialogue.getInstance().next(index);
-            }
+            CurrentDialogue.getInstance().next(indexFromLocation(cursor));
 
         }
+        if (observable instanceof MouseHover) {
+            MouseHover mouseHover = (MouseHover) observable;
+            Vector2 cursor = mouseHover.getPosition();
+            CurrentDialogue.getInstance().setHovering(indexFromLocation(cursor));
+        }
+    }
+
+    int indexFromLocation(Vector2 location){
+        if (location.x > 950 && location.y < 150 && location.x<1150&&location.y>10){
+            //Cursor befindet sich in der Optionen box
+            int index = (int)((location.y-50)/25f); //Index Berechnen
+            index = 3-index; //Idex Invertieren
+            return index;
+        }
+        return -1;
     }
 }

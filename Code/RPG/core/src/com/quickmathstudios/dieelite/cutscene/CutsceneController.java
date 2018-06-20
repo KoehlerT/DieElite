@@ -28,9 +28,6 @@ public class CutsceneController implements Observer, Disposable {
             }
         }
 
-        String message = cutscene.getMessage();
-        if (message!= null)
-            workMessage(message);
     }
 
     private void workMessage(String msg){
@@ -44,6 +41,9 @@ public class CutsceneController implements Observer, Disposable {
 
     public void updateLogic(float time){
         cutscene.updateLogic(time);
+        String message = cutscene.getMessage();
+        if (message!= null)
+            workMessage(message);
     }
 
 

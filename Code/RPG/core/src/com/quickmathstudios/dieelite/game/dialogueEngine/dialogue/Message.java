@@ -6,12 +6,12 @@ public class Message {
 
     private Message[] followings;
     private String[] options;
-    private Texture alias;
+    private String alias;
     private String content;
 
-    public Message(String message, Texture personAlias, Message[] following, String[] options) {
+    public Message(String message, String aliasId, Message[] following, String[] options) {
         content = message;
-        alias = personAlias;
+        alias = aliasId;
         followings = following;
         this.options = options;
     }
@@ -28,7 +28,7 @@ public class Message {
         return content;
     }
 
-    public Texture getAlias() {
+    public String getAliasId() {
         return alias;
     }
 }

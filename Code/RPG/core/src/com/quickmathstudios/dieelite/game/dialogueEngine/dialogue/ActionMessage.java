@@ -7,8 +7,8 @@ public class ActionMessage extends SimpleMessage {
 
     private Action messageEvent; //Event/ Action beim Beenden dieser Nachricht
 
-    public ActionMessage(String message, Texture personAlias, Message following, Action action) {
-        super(message, personAlias, following);
+    public ActionMessage(String message, String aliasId, Message following, Action action) {
+        super(message, aliasId, following);
         messageEvent = action;
     }
 
