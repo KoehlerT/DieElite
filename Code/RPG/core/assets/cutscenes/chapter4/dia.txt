@@ -1,9 +1,5 @@
-﻿3§HI
-4§HI
-5§HI
-6§HI
-7§HI
-8§HI3
-9§HI
-400§Sag Was
-420§STOP
+70§Wie schaust du denn aus? Das Schulhaus gehört nicht dir.
+130§Du darfst es zwar benutzen, %aber so wie du damit umgehst, hast du es nicht verdient
+180§Du darfst auch längst nicht mehr hier sein! %Am liebsten würde ich dich rauswerfen!
+230§Aber ein Sozialdienst sollte genügen!
+260§STOP

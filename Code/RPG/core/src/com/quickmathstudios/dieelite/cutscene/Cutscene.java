@@ -27,21 +27,23 @@ public class Cutscene implements Disposable {
         files = Gdx.files.internal(resourcePath+"files.txt").readString().split("\\n");
         String[] messageFile = Gdx.files.internal(resourcePath+"dia.txt").readString().split("\\n");
         getMessages(messageFile);
-
     }
 
     private void getMessages(String[] file){
         for (int i = 0; i < file.length; i++){
+            System.out.println("file["+i+"]: "+file[i]);
             String[] parts = file[i].split("§");
-            Integer frame = (Integer)Integer.parseInt(parts[0].replaceAll(Character.toString((char)65279),""));
-            messages.put(frame,parts[1]);
+            String numberPart = parts[0].replaceAll(Character.toString((char)65279),"").replaceAll("[^\\d]","");
+            Integer frame = (Integer)Integer.parseInt(numberPart);
+            messages.put(frame,parts[1].replaceAll("%","\n"));
         }
     }
 
     private void getTextures(String resourcePath, int loaded){
         //System.out.println((int)files[0].toCharArray()[5]);
         for (int i = loaded; i < loaded + 10 && i < files.length; i++){
-            textureList.add(new Texture(resourcePath+files[i]));
+            System.out.println(files[i].toCharArray().length);
+            textureList.add(new Texture(resourcePath+files[i].substring(0,files[i].toCharArray().length-1)));
 
         }
 

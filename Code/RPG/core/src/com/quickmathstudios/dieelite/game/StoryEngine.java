@@ -18,7 +18,7 @@ public class StoryEngine {
     }
 
     private int step = -1;
-    private int chapter = 0;
+    private int chapter = 1;
     private int branch = 0; //Branch = 1: Gutes Ergebnis, //Branch = 0: schlechtes Ergebnis
 
     private StoryEngine() {
@@ -70,7 +70,7 @@ public class StoryEngine {
                 System.out.println("Chp 3");
                 StateEngine.getInstance().SwitchState(new loadingState(
                         new CutsceneState(
-                                new Cutscene("chapter3")
+                                new MovieCutscene("chapter10",1/24f)
                         ),1));
             }
             if (step == 1){
@@ -111,10 +111,10 @@ public class StoryEngine {
         }else if (chapter == 5){
 
             if (step == 0){
-                RoomChanger.getInstance().changeRoom(new Story6());
+                RoomChanger.getInstance().changeRoom(new Way1());
             }
             if (step == 1){
-                RoomChanger.getInstance().changeRoom(new Story6());
+                RoomChanger.getInstance().changeRoom(new Way2());
             }
             if (step == 2){
                 chapter = 6;
@@ -152,7 +152,7 @@ public class StoryEngine {
             }
         }else if (chapter == 7){
             if (step == 0) {
-                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new Cutscene("chapter8")),3));
+                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter8",1f/24f)),3));
             }
             if (step == 1){
                 //Cutscene beendet
@@ -181,7 +181,7 @@ public class StoryEngine {
                 if (step == 1){
                     //Herr Butters Büro mit Opferritual
                     System.out.println("OFER");
-                    StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/10f)),3));
+                    StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/24f)),3));
                 }
 
                 if (step == 2){
