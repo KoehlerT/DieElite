@@ -3,9 +3,9 @@ package com.quickmathstudios.dieelite.credits;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
-import com.quickmathstudios.dieelite.game.GameState;
 import com.quickmathstudios.dieelite.input.MouseClick;
 import com.quickmathstudios.dieelite.input.MouseHover;
+import com.quickmathstudios.dieelite.sound.SoundManager;
 import com.quickmathstudios.dieelite.main.StateEngine;
 import com.quickmathstudios.dieelite.mainMenu.MenuScreen;
 import com.quickmathstudios.dieelite.utillity.Action;
@@ -27,6 +27,7 @@ public class CreditsState implements State, Observer {
     @Override
     public void Show() {
         background = new Texture("credits/background.png");
+        SoundManager.getInstance().switchBackground(1);
 
         //Zurückschaltfäche wird instanziiert
         back = new Button(new Texture("credits/backBtn.png"),

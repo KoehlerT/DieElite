@@ -16,13 +16,14 @@ import com.quickmathstudios.dieelite.utillity.hit.Hitable;
 public class Bernweich extends Interactable{
 
 
-    Message dialog;
+    private Message dialog;
+    private int trys;
 
     public Bernweich(Vector2 position) {
         super(new Texture("entities/bernweich.png"),
                 position,null);
         this.position = position;
-
+        trys =0;
         constructMessage();
     }
 
@@ -136,7 +137,7 @@ public class Bernweich extends Interactable{
                         new ActionMessage("Ihr seid entlassen", "bernweich", null, new Action() {
                             @Override
                             public void act() {
-                                StoryEngine.getInstance().updateStory();
+                                StoryEngine.getInstance().updateStory(1);
                             }
                         })),
                 new SimpleMessage("Locker 70 %, bro? Dein ernst?", "bernweich",fail),
@@ -148,14 +149,26 @@ public class Bernweich extends Interactable{
         dialog = new SimpleMessage("Oh, Ich habe euch heute in meiner Vertretungsstunde","bernweich",
                 new SimpleMessage("Hab ich das gerade richtig gehört? Ihr wollt Karten spielen? Nein, das werden\n wir nicht machen. " +
                         "Wir üben etwas Mathematik der vergangenen Jahre. Wenn ihr auf \ndie Idee kommen solltet das Rätsel nicht ernst zu nehmen, " +
-                        "dann werde\n ich es eurem Mathelehrer geben und der benotet es dann!","bernweich",
+                        "dann werde\n ich es eurem Mathelehrer geben und der benotet es dann!","bernweich",4,
                         new SimpleMessage(" Kevin du fängst an!\nIch stelle dir jetzt 10 Fragen und zwar solange, bis du alle richtig hast","bernweich",
                                 frage1())));
     }
 
     @Override
     public void interact() {
-        CurrentDialogue.getInstance().addDialogue(dialog);
+        trys++;
+        if (trys != 3){
+            CurrentDialogue.getInstance().addDialogue(dialog);
+        }else{
+            CurrentDialogue.getInstance().addDialogue(new ActionMessage("Die Entwickler dieses Spiels lassen Gnade Walten\n" +
+                    "Du darfst gehen!", "", 17,null, new Action() {
+                @Override
+                public void act() {
+                    StoryEngine.getInstance().updateStory(1);
+                }
+            }));
+        }
+
     }
 
 

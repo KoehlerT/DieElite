@@ -4,6 +4,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.quickmathstudios.dieelite.utillity.State;
 
+import java.util.ArrayList;
+
 public class CutsceneState implements State {
 
     Cutscene scene;

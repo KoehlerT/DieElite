@@ -22,9 +22,9 @@ public class Classroom2 extends Room {
             @Override
             public void act() {
                 int step = StoryEngine.getInstance().getStep();
-                if (step <= -0){
-                    //Rätsel noch nicht bestanden
-                    CurrentDialogue.getInstance().addDialogue(new SimpleMessage("Du bist noch nicht Fertig!",null,null));
+                if (step <= 0){
+                    //Rätsel noch nicht bestanden oder Gnadenfortschritt
+                    CurrentDialogue.getInstance().addDialogue(new SimpleMessage("Du bist noch nicht Fertig!",null,16,null));
                 }else {
                     StoryEngine.getInstance().updateStory();
                 }

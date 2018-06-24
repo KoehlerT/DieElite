@@ -24,7 +24,7 @@ public class Boathouse extends Room {
             @Override
             public void interact() {
                 if (StoryEngine.getInstance().getStep() != 1){
-                    CurrentDialogue.getInstance().addDialogue(new SimpleMessage("Du darfst noch nicht",null,null));
+                    CurrentDialogue.getInstance().addDialogue(new SimpleMessage("Du darfst noch nicht",null,16,null));
                 }else{
                     StoryEngine.getInstance().updateStory();
                 }

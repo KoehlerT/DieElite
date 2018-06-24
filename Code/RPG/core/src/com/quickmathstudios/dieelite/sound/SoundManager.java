@@ -1,6 +1,5 @@
-package com.quickmathstudios.dieelite.main;
+package com.quickmathstudios.dieelite.sound;
 
-import com.badlogic.gdx.Audio;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.*;
 import com.badlogic.gdx.utils.Disposable;
@@ -22,19 +21,18 @@ public class SoundManager implements Disposable {
 
     //Musikmanagement
     private Music currentBackground;
-    private Music[] musics = new Music[1];
+    private Music[] musics = new Music[2];
+    Voices voices;
 
     //Alle Soundeffekte
     private Map<String,Sound> soundMap = new HashMap<String, Sound>();
 
     private SoundManager() {
         //Befülle das Musikarray
-        musics[0] = Gdx.audio.newMusic(Gdx.files.internal("sound/background/default.mp3"));
-        musics[0].setLooping(true);
-        musics[0].setVolume(0.5f);
-
+        loadBackgrounds();
+        voices = new Voices();
         loadSounds(); //Befülle die Soundsmap
-        switchBackground(0);
+        switchBackground(1);
     }
 
     public void playBackground(){
@@ -66,15 +64,30 @@ public class SoundManager implements Disposable {
 
     }
 
+    public void playVoiceById(int id){
+        voices.playSoundById(id);
+    }
+
     //PRIVATE METHODS
     private void loadSounds(){
         soundMap.put("hover",Gdx.audio.newSound(Gdx.files.internal("sound/menu/hover.wav")));
         soundMap.put("click",Gdx.audio.newSound(Gdx.files.internal("sound/menu/click.wav")));
     }
 
+    private void loadBackgrounds(){
+        musics[0] = Gdx.audio.newMusic(Gdx.files.internal("sound/background/default.mp3"));
+        musics[1] = Gdx.audio.newMusic(Gdx.files.internal("sound/background/menu.mp3"));
+
+        for (int i = 0; i < musics.length; i++){
+            musics[i].setLooping(true);
+            musics[i].setVolume(0.5f);
+        }
+    }
+
 
     @Override
     public void dispose() {
+        voices.dispose();
         for (int i = 0; i < musics.length; i++){
             musics[i].dispose();
         }

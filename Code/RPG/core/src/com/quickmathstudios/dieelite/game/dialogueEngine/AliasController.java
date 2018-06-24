@@ -32,7 +32,9 @@ public class AliasController implements Disposable {
         list.put("player",new Texture("alias/player.png"));
         list.put("butter",new Texture("alias/butter.png"));
         list.put("manu",new Texture("alias/manu.png"));
-        //list.put("player",new Texture("playerAlias.png"));
+        list.put("kehrmain",new Texture("alias/kehrmain.png"));
+        list.put("leopard",new Texture("alias/leopard.png"));
+        list.put("mum",new Texture("alias/mum.png"));
     }
 
     @Override

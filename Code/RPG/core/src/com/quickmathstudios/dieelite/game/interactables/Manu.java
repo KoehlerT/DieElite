@@ -56,8 +56,9 @@ public class Manu extends Interactable {
     }
 
     private void constructDialogue(){
-        dialogue = new SimpleMessage("WAS FÄLLT DIR EIN? Ein Kind in Afrika würde davon einen Tag lang \nleben können. Ich hab da so ne Applikation in diesem Playstore gefunden. \nDa könntest du die 40 Cent spenden und einem Kind einen Tag retten.\n Stattdessen schmeißt du es weg, du abgehobener Schnösel.","manu",
-                new Message("Aber so wie ich dich kenne ignorierst du es eh einfach. Weißt du, \nmanchmal erzähle ich Leuten was schlimmes mit Schweinen beim Schlachter passiert,\n aber die ignorieren dass einfach….","manu",
+        dialogue = new SimpleMessage("WAS FÄLLT DIR EIN? Ein Kind in Afrika würde davon einen Tag lang \nleben können. Ich hab da so ne Applikation in diesem Playstore gefunden. \nDa könntest du die 40 Cent spenden und einem Kind einen Tag retten.\n Stattdessen schmeißt du es weg, du abgehobener Schnösel.",
+                "manu",7,
+                new Message("Aber so wie ich dich kenne ignorierst du es eh einfach. Weißt du, \nmanchmal erzähle ich Leuten was schlimmes mit Schweinen beim Schlachter passiert,\n aber die ignorieren das einfach….","manu",
                 new Message[] {new ActionMessage("SOFORT WEG HIER!", "manu", null, new Action() {
                     @Override
                     public void act() {

@@ -8,12 +8,22 @@ public class Message {
     private String[] options;
     private String alias;
     private String content;
+    private int voiceId;
 
     public Message(String message, String aliasId, Message[] following, String[] options) {
         content = message;
         alias = aliasId;
         followings = following;
         this.options = options;
+        this.voiceId = -1;
+    }
+
+    public Message(String message, String aliasId, int voiceId, Message[] following, String[] options) {
+        content = message;
+        alias = aliasId;
+        followings = following;
+        this.options = options;
+        this.voiceId = voiceId;
     }
 
     public String[] getOptions() {
@@ -31,4 +41,6 @@ public class Message {
     public String getAliasId() {
         return alias;
     }
+
+    public int getVoiceId(){return voiceId;}
 }

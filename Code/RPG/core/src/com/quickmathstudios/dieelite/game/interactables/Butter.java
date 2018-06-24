@@ -20,7 +20,7 @@ public class Butter extends Interactable {
     }
 
     private Message getDialogue(){
-        Message root = new ActionMessage("Rudern ist gut für den ganzen Körper. Es gibt keine Sportart, die so viel \nfür alle Teile des Körpers macht, wie es rudern tut. Bauch, Rücken, Beine und Arme\n alles wird zu Kruppstahl durch Ruderübungen. Also zeig mir was deine Fähigkeiten sind \nund wenn du eine ausreichende Punktzahl erreichst, gibt es eine Belohnung. ", "butter", null, new Action() {
+        Message root = new ActionMessage("Rudern ist gut für den ganzen Körper. Es gibt keine Sportart, die so viel \nfür alle Teile des Körpers macht, wie es rudern tut. Bauch, Rücken, Beine und Arme\n alles wird zu Kruppstahl durch Ruderübungen. Also zeig mir was deine Fähigkeiten sind \nund wenn du eine ausreichende Punktzahl erreichst, gibt es eine Belohnung. ", "butter",8, null, new Action() {
             @Override
             public void act() {
                 StoryEngine.getInstance().updateStory(1);
@@ -30,14 +30,14 @@ public class Butter extends Interactable {
         if (StoryEngine.getInstance().getStep() > 1){
             //Ruderspiel fertig!
             if (StoryEngine.getInstance().getBranch() == 0){
-                root = new ActionMessage("Du hast es gar nicht richtig probiert. Als ich deinen Körper gesehen habe,\n habe ich perfekte Eignung für Rudern festgestellt. \nDu bist die größte Enttäuschung die ich seit Julian und Tim je hatte.\n Bitte komm Freitag in mein Büro um diesen Fehler auszubügeln.", "butter", null, new Action() {
+                root = new ActionMessage("Du hast es gar nicht richtig probiert. Als ich deinen Körper gesehen habe,\n habe ich perfekte Eignung für Rudern festgestellt. \nDu bist die größte Enttäuschung die ich seit Julian und Tim je hatte.\n Bitte komm Freitag in mein Büro um diesen Fehler auszubügeln.", "butter", 10,null, new Action() {
                     @Override
                     public void act() {
                         StoryEngine.getInstance().updateStory();
                     }
                 });
             }else{
-                root = new ActionMessage("So ein gutes Ergebnis, dass hatte das letzte mal \nmein Schüler Klaus. Der ist zum bairischen Landesentscheid gefahren. \nBitte komm Freitag in mein Büro. ", "butter", null, new Action() {
+                root = new ActionMessage("So ein gutes Ergebnis, das hatte das letzte mal \nmein Schüler Klaus. Der ist zum bairischen Landesentscheid gefahren. \nBitte komm Freitag in mein Büro. ", "butter", 9,null, new Action() {
                     @Override
                     public void act() {
                         StoryEngine.getInstance().updateStory();

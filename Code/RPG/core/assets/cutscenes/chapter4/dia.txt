@@ -1,5 +1,6 @@
-70§Wie schaust du denn aus? Das Schulhaus gehört nicht dir.
-130§Du darfst es zwar benutzen, %aber so wie du damit umgehst, hast du es nicht verdient
-180§Du darfst auch längst nicht mehr hier sein! %Am liebsten würde ich dich rauswerfen!
-230§Aber ein Sozialdienst sollte genügen!
-260§STOP
+70§kehrmain&6&Wie schaust du denn aus? Das Schulhaus gehört nicht dir.
+110§kehrmain&Du darfst es zwar benutzen, %aber so wie du damit umgehst, hast du es nicht verdient
+220§kehrmain&Du darfst auch längst nicht mehr hier sein! %Am liebsten würde ich dich rauswerfen!
+350§kehrmain&Aber ein Sozialdienst sollte genügen!
+420§kehrmain&Komm gleich mit raus, und sammle den Müll auf
+480§STOP

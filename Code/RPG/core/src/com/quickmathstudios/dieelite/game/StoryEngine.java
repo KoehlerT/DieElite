@@ -18,7 +18,7 @@ public class StoryEngine {
     }
 
     private int step = -1;
-    private int chapter = 1;
+    private int chapter = 0;
     private int branch = 0; //Branch = 1: Gutes Ergebnis, //Branch = 0: schlechtes Ergebnis
 
     private StoryEngine() {
@@ -70,8 +70,8 @@ public class StoryEngine {
                 System.out.println("Chp 3");
                 StateEngine.getInstance().SwitchState(new loadingState(
                         new CutsceneState(
-                                new MovieCutscene("chapter10",1/24f)
-                        ),1));
+                                new MovieCutscene("chapter3",1/18f)
+                        ),0));
             }
             if (step == 1){
                 System.out.println("Next chapter");
@@ -83,7 +83,7 @@ public class StoryEngine {
         }else if (chapter == 3){
             if (step == 0){
                 System.out.println("Story 4");
-                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter4",1f/24f)),2));
+                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter4",1f/18f)),0));
 
             }
             if (step == 1){
@@ -152,7 +152,7 @@ public class StoryEngine {
             }
         }else if (chapter == 7){
             if (step == 0) {
-                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter8",1f/24f)),3));
+                StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter8",1f/24f)),0));
             }
             if (step == 1){
                 //Cutscene beendet
@@ -181,7 +181,7 @@ public class StoryEngine {
                 if (step == 1){
                     //Herr Butters Büro mit Opferritual
                     System.out.println("OFER");
-                    StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/24f)),3));
+                    StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/24f)),0));
                 }
 
                 if (step == 2){

@@ -33,17 +33,15 @@ public class ButterQuestion extends Interactable {
     }
 
     private Message talk(Message frage){
-        return new SimpleMessage("hallo Kevin, schön, dass du gekommen bist","butter",
-                new SimpleMessage("Die Aufsätze die du mir letztens abgeliefert hast...","butter",
-                        new SimpleMessage("Ja?","player",
-                                new SimpleMessage("... sind echt schlecht!","butter",
-                                        new SimpleMessage("Ich kann dir nur Raten:\n Schreiben lernt man nur durch Schreiben","butter",
+        return new SimpleMessage("hallo Kevin, schön, dass du gekommen bist","butter",23,
+                new SimpleMessage("Die Aufsätze die du mir letztens abgeliefert hast...","butter",24,
+                        new SimpleMessage("Ja?","player",21,
+                                new SimpleMessage("... sind echt schlecht!","butter",25,
+                                        new SimpleMessage("Ich kann dir nur Raten:\n Schreiben lernt man nur durch Schreiben","butter",26,
                                                 new SimpleMessage("und wenn du dich stark ins Zeug legst\n" +
-                                                        "schaffst du vielleicht noch eine ausreichende Leistung","butter",
-                                                        new SimpleMessage("Die Zahl, der Fehler, im Bereich der! Zeichensetzung und\n"+
-                                                        "Rechtsschreibung, könnte bei dir auch etwas geringer sein","butter",
+                                                        "schaffst du vielleicht noch eine ausreichende Leistung","butter",27,
                                                                 new SimpleMessage("Deshalb werden wir jetzt EWIG\n" +
-                                                                        "deine Rechtschreibintuition trainieren.","butter",frage))))))));
+                                                                        "deine Rechtschreibintuition trainieren.","butter",28,frage)))))));
     }
 
     private Message fragen(){

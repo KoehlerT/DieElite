@@ -13,7 +13,7 @@ public class Way1 extends Room {
     public Way1(){
         super("rooms/outside.png");
 
-        Dog dog =new Dog(new Vector2(-100,100),new Vector2(1200,100),150f);
+        Dog dog =new Dog(new Vector2(1200,100),new Vector2(-5000,100),150f);
         Player.getInstance().setPosition(new Vector2(900,250));
         super.setInteractables(new Interactable[]{dog});
         CurrentDialogue.getInstance().addDialogue(new SimpleMessage("keiner mag mich ;(","player",null));

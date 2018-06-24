@@ -2,6 +2,7 @@ package com.quickmathstudios.dieelite.game.dialogueEngine;
 
 import com.badlogic.gdx.graphics.Color;
 import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.Message;
+import com.quickmathstudios.dieelite.sound.SoundManager;
 
 /**Informationen über Dialog
  * Messages verweisen auf sich selbst und generieren einen Entscheidungs-Verweißbaum
@@ -23,7 +24,11 @@ public class CurrentDialogue {
     }
 
     public void addDialogue(Message root){
+
         current = root;
+        //Sound
+        if (current != null)
+            SoundManager.getInstance().playVoiceById(current.getVoiceId());
     }
 
     public Message getCurrent() {
@@ -34,8 +39,7 @@ public class CurrentDialogue {
         if (current == null)
             return;
         if (current.getOptions().length > choiceIndex && choiceIndex >= 0){ //Check, ist Index Legal?
-            current = current.getFollowing(choiceIndex);
-
+            addDialogue(current.getFollowing(choiceIndex));
         }
     }
 

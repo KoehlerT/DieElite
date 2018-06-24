@@ -12,6 +12,21 @@ import java.awt.event.MouseAdapter;
  * **/
 public class DialogueController implements Observer {
 
+    @Override
+    public void Update(Observable observable, Object sender) {
+        if (observable instanceof MouseClick) {
+            MouseClick mouseInfo = (MouseClick) observable;
+            //Check, which option is clicked
+            Vector2 cursor = mouseInfo.getPosition();
+            CurrentDialogue.getInstance().next(indexFromLocation(cursor));
+        }
+        if (observable instanceof MouseHover) {
+            MouseHover mouseHover = (MouseHover) observable;
+            Vector2 cursor = mouseHover.getPosition();
+            CurrentDialogue.getInstance().setHovering(indexFromLocation(cursor));
+        }
+    }
+
     public DialogueController(){
         MouseClick.getInstance().addObserver(this);
         MouseHover.getInstance().addObserver(this);
@@ -22,22 +37,6 @@ public class DialogueController implements Observer {
         MouseClick.getInstance().deleteObserver(this);
         MouseHover.getInstance().deleteObserver(this);
     } //Mausklick Beobachtung beenden
-
-    @Override
-    public void Update(Observable observable, Object sender) {
-        if (observable instanceof MouseClick) {
-            MouseClick mouseInfo = (MouseClick) observable;
-            //Check, which option is clicked
-            Vector2 cursor = mouseInfo.getPosition();
-            CurrentDialogue.getInstance().next(indexFromLocation(cursor));
-
-        }
-        if (observable instanceof MouseHover) {
-            MouseHover mouseHover = (MouseHover) observable;
-            Vector2 cursor = mouseHover.getPosition();
-            CurrentDialogue.getInstance().setHovering(indexFromLocation(cursor));
-        }
-    }
 
     int indexFromLocation(Vector2 location){
         if (location.x > 950 && location.y < 150 && location.x<1150&&location.y>10){

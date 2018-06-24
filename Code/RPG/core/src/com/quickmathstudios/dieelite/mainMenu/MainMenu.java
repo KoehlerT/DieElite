@@ -6,6 +6,7 @@ import com.badlogic.gdx.utils.Disposable;
 import com.quickmathstudios.dieelite.credits.CreditsState;
 import com.quickmathstudios.dieelite.game.GameState;
 import com.quickmathstudios.dieelite.loadingScreen.loadingState;
+import com.quickmathstudios.dieelite.sound.SoundManager;
 import com.quickmathstudios.dieelite.main.StateEngine;
 import com.quickmathstudios.dieelite.utillity.Action;
 import com.quickmathstudios.dieelite.utillity.hit.Button;
@@ -30,6 +31,7 @@ public class MainMenu implements Disposable{
             @Override
             public void act() {
                 StateEngine.getInstance().SwitchState(new loadingState(new GameState(),2));
+                SoundManager.getInstance().switchBackground(0);
             }
         });
         //Credits Button

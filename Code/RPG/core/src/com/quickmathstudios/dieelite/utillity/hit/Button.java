@@ -1,16 +1,9 @@
 package com.quickmathstudios.dieelite.utillity.hit;
 
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
-import com.quickmathstudios.dieelite.main.SoundManager;
+import com.quickmathstudios.dieelite.sound.SoundManager;
 import com.quickmathstudios.dieelite.utillity.Action;
-import com.quickmathstudios.dieelite.utillity.Observable;
-import com.quickmathstudios.dieelite.utillity.Observer;
-
-import java.util.LinkedList;
-import java.util.List;
 
 public class Button extends HitBox {
 

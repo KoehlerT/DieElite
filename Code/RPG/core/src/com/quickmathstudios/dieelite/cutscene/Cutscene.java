@@ -24,14 +24,17 @@ public class Cutscene implements Disposable {
 
     public Cutscene(String name){
         resourcePath = "cutscenes/"+name+"/";
-        files = Gdx.files.internal(resourcePath+"files.txt").readString().split("\\n");
-        String[] messageFile = Gdx.files.internal(resourcePath+"dia.txt").readString().split("\\n");
+        files = Gdx.files.internal(resourcePath+"files.txt").readString("UTF-8").split("\\n");
+        String[] messageFile = Gdx.files.internal(resourcePath+"dia.txt").readString("UTF-8").split("\\n");
         getMessages(messageFile);
     }
 
     private void getMessages(String[] file){
         for (int i = 0; i < file.length; i++){
             System.out.println("file["+i+"]: "+file[i]);
+
+            //Convert to UTF-8
+
             String[] parts = file[i].split("§");
             String numberPart = parts[0].replaceAll(Character.toString((char)65279),"").replaceAll("[^\\d]","");
             Integer frame = (Integer)Integer.parseInt(numberPart);
@@ -39,11 +42,12 @@ public class Cutscene implements Disposable {
         }
     }
 
+
     private void getTextures(String resourcePath, int loaded){
         //System.out.println((int)files[0].toCharArray()[5]);
         for (int i = loaded; i < loaded + 10 && i < files.length; i++){
-            System.out.println(files[i].toCharArray().length);
-            textureList.add(new Texture(resourcePath+files[i].substring(0,files[i].toCharArray().length-1)));
+            //System.out.println(files[i].toCharArray().length);
+            textureList.add(new Texture(resourcePath+files[i].substring(0,13)));
 
         }
 
@@ -81,6 +85,10 @@ public class Cutscene implements Disposable {
 
     public void updateLogic(float time){
 
+    }
+
+    public boolean finished() {
+        return (currentTexture >= textures.length-1);
     }
 
     @Override

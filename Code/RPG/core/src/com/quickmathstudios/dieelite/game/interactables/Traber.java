@@ -42,11 +42,12 @@ public class Traber extends Interactable{
     private void getDialog(int index){
         if (index == 0){
             Message root = new Message("Hallo Kevin, würdest du bitte ins Sekretäriat eilen\n" +
-                    "und mir eine Packung Kreide holen?",alias,
+                    "und mir dort ein Päckchen Kreide holen?",alias,0,
                     new Message[] {new SimpleMessage("Mit Verlaub junger Mann, so kann das nicht weitergehen. \n" +
                             "Du bist die Elite des bayrisches Bildungswesens und so wirst du das Abitur vielleicht \n" +
-                            "schaffen, aber viel weiter bringst du es dann auch nicht!",alias,null),
-                            new ActionMessage("Diese Arbeitshaltung ist sehr löblich.\n So etwas begegnet einem heutzutage selten.", alias, null, new Action() {
+                            "schaffen, aber viel weiter bringst du es dann auch nicht!",alias,2,null),
+                            new ActionMessage("Diese Arbeitshaltung ist sehr löblich.\n So etwas begegnet einem heutzutage selten.",
+                                    alias,1, null, new Action() {
                         @Override
                         public void act() {
                             StoryEngine.getInstance().updateStory();
@@ -59,7 +60,7 @@ public class Traber extends Interactable{
             Message root = new ActionMessage("Vielen Dank Kevin! Möchtest du vielleicht in den\n" +
                     " Mathepluskurs, oder mit mir alleine" +
                     "durch die Wildnis laufen und einen Geocache suchen?\n" +
-                    " Nein? dann tust du mir leid...",alias,null,new Action(){
+                    " Nein? dann tut mir das leid...",alias,3,null,new Action(){
                 @Override
                 public void act(){
                     StoryEngine.getInstance().updateStory();

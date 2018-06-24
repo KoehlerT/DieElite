@@ -1,12 +1,12 @@
 ﻿1§*Klopf Klopf*
-20§JA
+20§butter&12&JA
 50§STOP
-82§Komm näher
+82§butter&13&Komm näher
 110§STOP
-230§Komm
+230§butter&14&Komm
 250§STOP
-300§Hoch lebe unser Rudergott
-340§Lass die Kräfte von Kevin Oberdennis in meinen Körper fließen
-390§STOP
-400§Neeeeein
-450§STOP
+300§butter&15&Hoch lebe unser Rudergott
+340§butter&Lass die Kräfte von Kevin Oberdennis in meinen Körper fließen
+400§STOP
+450§player&19&Neeeeein
+500§STOP

@@ -5,11 +5,17 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 import com.quickmathstudios.dieelite.game.StoryEngine;
+import com.quickmathstudios.dieelite.game.dialogueEngine.CurrentDialogue;
+import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.ActionMessage;
+import com.quickmathstudios.dieelite.game.dialogueEngine.dialogue.SimpleMessage;
+import com.quickmathstudios.dieelite.utillity.Action;
 import com.quickmathstudios.dieelite.utillity.hit.HitBox;
 
 import javax.xml.soap.Text;
 
 public class Dog extends Interactable {
+    static boolean first = true; //Kleiner Hotfix: Hund soll nur beim Ersten mal einen Dialog aufrufen
+
     Animation<TextureRegion> animation;
     private float animationTime = 0f;
 
@@ -54,7 +60,17 @@ public class Dog extends Interactable {
 
     @Override
     public void interact() {
-        StoryEngine.getInstance().updateStory();
+        if (first) {
+            first = false;
+            CurrentDialogue.getInstance().addDialogue(new ActionMessage("Magst du mich wenigstens noch?", "player", 20,null, new Action() {
+                @Override
+                public void act() {
+                    StoryEngine.getInstance().updateStory();
+                }
+            }));
+        }else{
+            StoryEngine.getInstance().updateStory();
+        }
     }
 
     @Override

@@ -11,6 +11,10 @@ public class ActionMessage extends SimpleMessage {
         super(message, aliasId, following);
         messageEvent = action;
     }
+    public ActionMessage(String message, String aliasId, int voiceId, Message following, Action action) {
+        super(message, aliasId, voiceId, following);
+        messageEvent = action;
+    }
 
     @Override
     public Message getFollowing(int choiceIndex){

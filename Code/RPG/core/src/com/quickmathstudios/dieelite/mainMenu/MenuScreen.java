@@ -1,7 +1,6 @@
 package com.quickmathstudios.dieelite.mainMenu;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.quickmathstudios.dieelite.main.SoundManager;
 import com.quickmathstudios.dieelite.utillity.State;
 
 /**Die Gamestate Klasse des Hauptmenüs.

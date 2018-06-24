@@ -1,9 +1,9 @@
-﻿1§Cuscenes können durch Klicken übersprungen werden
-24§STOP
-114§Huch?!
+﻿3§Cuscenes können durch Klicken übersprungen werden
+50§STOP
+114§player&18&Huch?!
 130§STOP
-200§NEEEIN
+200§player&19&NEEEIN
 220§STOP
-350§KEINE KABELBINDER ZUM FESSELN VERWENDEN%Wisst ihrm so ein Kabelbinder hat genug Kraft eine Melone zu zerdrücken,
-400§Wie der FC Bayerm den FC Nürnberg *schluchz* ...%Euch kann wirklich viel passieren
-450§STOP
+300§leopard&5&KEINE KABELBINDER ZUM FESSELN VERWENDEN%Wisst ihr so ein Kabelbinder hat genug Kraft eine Melone zu zerdrücken,
+420§leopard&Wie der FC Bayern den FC Nürnberg *schluchz* ...%Euch kann wirklich viel passieren
+520§STOP

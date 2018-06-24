@@ -34,7 +34,22 @@ public class CutsceneController implements Observer, Disposable {
         if (msg.contains("STOP")){
             CurrentDialogue.getInstance().addDialogue(null);
         }else {
-            CurrentDialogue.getInstance().addDialogue(new SimpleMessage(msg, null, null));
+            String alias = "default";
+            int voiceId = -1;
+
+            if (msg.contains("&")){
+                String[] sp = msg.split("&");
+                if (sp.length == 2){
+                    alias = sp[0];
+                    msg = sp[1];
+                }else if (sp.length == 3){
+                    alias = sp[0];
+                    voiceId = Integer.parseInt(sp[1].replaceAll("[^\\d]",""));//Sicher gehen, dass da kein Müll dabei ist!
+                    msg = sp[2];
+                }
+
+            }
+            CurrentDialogue.getInstance().addDialogue(new SimpleMessage(msg, alias,voiceId, null));
         }
 
     }
