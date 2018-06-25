@@ -31,9 +31,6 @@ public class Cutscene implements Disposable {
 
     private void getMessages(String[] file){
         for (int i = 0; i < file.length; i++){
-            System.out.println("file["+i+"]: "+file[i]);
-
-            //Convert to UTF-8
 
             String[] parts = file[i].split("§");
             String numberPart = parts[0].replaceAll(Character.toString((char)65279),"").replaceAll("[^\\d]","");
@@ -44,9 +41,7 @@ public class Cutscene implements Disposable {
 
 
     private void getTextures(String resourcePath, int loaded){
-        //System.out.println((int)files[0].toCharArray()[5]);
         for (int i = loaded; i < loaded + 10 && i < files.length; i++){
-            //System.out.println(files[i].toCharArray().length);
             textureList.add(new Texture(resourcePath+files[i].substring(0,13)));
 
         }
@@ -79,7 +74,6 @@ public class Cutscene implements Disposable {
 
     public boolean nextStep(){
         currentTexture ++;
-        //System.out.println(currentTexture+" "+textures.length+" "+(currentTexture < textures.length));
         return  (currentTexture < textures.length);
     }
 

@@ -2,51 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2e7905d-c827-444f-a849-ab455370f3f7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPG.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/RPG.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPG.iws" beforeDir="false" afterPath="$PROJECT_DIR$/RPG.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/credits/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/credits/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/cutscenes/chapter10/dia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/cutscenes/chapter10/dia.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/cutscenes/chapter10/files.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/cutscenes/chapter10/files.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/cutscenes/chapter3/dia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/cutscenes/chapter3/dia.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/cutscenes/chapter3/files.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/cutscenes/chapter3/files.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/cutscenes/chapter4/dia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/cutscenes/chapter4/dia.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/cutscenes/chapter4/files.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/cutscenes/chapter4/files.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/cutscenes/chapter8/dia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/cutscenes/chapter8/dia.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/rooms/classroom.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/rooms/classroom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/credits/CreditsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/credits/CreditsState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/Cutscene.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/Cutscene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneState.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/StoryEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/StoryEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/AliasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/AliasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/CurrentDialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/CurrentDialogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/DialogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/DialogueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/dialogue/ActionMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/dialogue/ActionMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/dialogue/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/dialogue/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/dialogue/SimpleMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/dialogue/SimpleMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Bernweich.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Bernweich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Butter.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Butter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/ButterQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/ButterQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Manu.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Manu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Traber.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Traber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Boathouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Boathouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Classroom2.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Classroom2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Way1.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Way1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/main/SoundManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Story4.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Story4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/main/StateEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/main/StateEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/utillity/hit/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/utillity/hit/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/com/quickmathstudios/dieelite/desktop/DesktopLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/com/quickmathstudios/dieelite/desktop/DesktopLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/minigames/rowing/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/minigames/rowing/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -119,31 +91,56 @@
       <file leaf-file-name="Voices.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="50" column="93" lean-forward="true" selection-start-line="50" selection-start-column="93" selection-end-line="50" selection-end-column="93" />
+            <state relative-caret-position="833">
+              <caret line="53" column="97" selection-start-line="53" selection-start-column="97" selection-end-line="53" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#248#249#0" expanded="true" />
-                <element signature="e#275#276#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dia.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/assets/cutscenes/chapter4/dia.txt">
+      <file leaf-file-name="MenuRenderer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="187">
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dia.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/assets/cutscenes/chapter3/dia.txt">
+      <file leaf-file-name="SoundManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="1020">
+              <caret line="76" column="66" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoryEngine.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/StoryEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Manu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Manu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="61" column="79" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -151,26 +148,17 @@
       <file leaf-file-name="CutsceneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="51" column="91" lean-forward="true" selection-start-line="51" selection-start-column="91" selection-end-line="51" selection-end-column="91" />
+            <state relative-caret-position="731">
+              <caret line="50" column="91" selection-start-line="50" selection-start-column="91" selection-end-line="50" selection-end-column="91" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cutscene.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cutscene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/Cutscene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="files.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/assets/cutscenes/chapter4/files.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="492" selection-start-line="492" selection-end-line="492" selection-end-column="13" />
+            <state relative-caret-position="408">
+              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -178,21 +166,8 @@
       <file leaf-file-name="Bernweich.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Bernweich.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-              <folding>
-                <element signature="e#9857#10027#0" expanded="true" />
-                <element signature="e#10026#10027#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Dog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="64" column="119" lean-forward="true" selection-start-line="64" selection-start-column="119" selection-end-line="64" selection-end-column="119" />
+            <state relative-caret-position="51">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -200,21 +175,8 @@
       <file leaf-file-name="Butter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Butter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="459">
               <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
-              <folding>
-                <element signature="e#2312#2501#0" expanded="true" />
-                <element signature="e#2500#2501#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ButterQuestion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/ButterQuestion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -240,7 +202,13 @@
       <find>textureList</find>
       <find>cutsce</find>
       <find>cutsc</find>
+      <find>System.out.print</find>
+      <find>Mathe</find>
+      <find>Butter</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Tim\Documents\GitHub\DieElite</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -822,9 +790,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="10684037958912" />
+        <entry key="$PROJECT_DIR$" value="10685858785213" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="166471155" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="2317111729" />
         <entry key="$PROJECT_DIR$/core/build.gradle" value="2247302725" />
         <entry key="$PROJECT_DIR$/desktop/build.gradle" value="4210346587" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="975134833" />
@@ -948,7 +916,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/minigames/rowing/RowingState.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/utillity/hit/HitBox.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/GameController.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Arrow.java" />
@@ -974,7 +941,6 @@
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneRenderer.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/AliasController.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/CurrentDialogue.java" />
-        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/DialogueController.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneState.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/dialogueEngine/dialogue/Message.java" />
@@ -983,7 +949,6 @@
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Traber.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneController.java" />
         <option value="$PROJECT_DIR$/core/assets/cutscenes/chapter3/files.txt" />
-        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Manu.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Butter.java" />
         <option value="$PROJECT_DIR$/core/assets/cutscenes/chapter10/files.txt" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/rooms/Classroom2.java" />
@@ -991,14 +956,17 @@
         <option value="$PROJECT_DIR$/core/assets/cutscenes/chapter3/dia.txt" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Dog.java" />
         <option value="$PROJECT_DIR$/core/assets/cutscenes/chapter10/dia.txt" />
-        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/StoryEngine.java" />
         <option value="$PROJECT_DIR$/core/assets/cutscenes/chapter8/dia.txt" />
         <option value="$PROJECT_DIR$/core/assets/cutscenes/chapter4/files.txt" />
         <option value="$PROJECT_DIR$/core/assets/cutscenes/chapter4/dia.txt" />
-        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/ButterQuestion.java" />
-        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Bernweich.java" />
         <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/Cutscene.java" />
+        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Manu.java" />
+        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java" />
+        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java" />
+        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Bernweich.java" />
+        <option value="$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/StoryEngine.java" />
       </list>
     </option>
   </component>
@@ -1008,7 +976,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
-    <option name="width" value="979" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1025,7 +993,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -1231,6 +1198,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1240,7 +1208,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16074951" />
     <property name="project.structure.side.proportion" value="0.31149426" />
@@ -1266,7 +1234,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Desktop Run">
+  <component name="RunManager" selected="Groovy.build (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -1395,8 +1363,8 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50065106" side_tool="true" weight="0.3529412" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" weight="0.30369356" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" weight="0.30369356" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21223958" />
@@ -1404,8 +1372,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39808482" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39808482" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -1428,20 +1396,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/minigames/rowing/swimming/Fish.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/minigames/rowing/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="149" column="34" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/minigames/rowing/swimming/SwimmingObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1488,9 +1442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1547,18 +1498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="e#789#804#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1639,13 +1578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Manu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="60" column="203" lean-forward="true" selection-start-line="60" selection-start-column="203" selection-end-line="60" selection-end-column="203" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/main/Info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1695,17 +1627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/StoryEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Dog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="64" column="119" lean-forward="true" selection-start-line="64" selection-start-column="119" selection-end-line="64" selection-end-column="119" />
+        <state relative-caret-position="867">
+          <caret line="64" column="119" selection-start-line="64" selection-start-column="119" selection-end-line="64" selection-end-column="119" />
         </state>
       </provider>
     </entry>
@@ -1732,38 +1657,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/assets/cutscenes/chapter4/files.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
+        <state relative-caret-position="8364">
           <caret line="492" selection-start-line="492" selection-end-line="492" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Butter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
-          <folding>
-            <element signature="e#2312#2501#0" expanded="true" />
-            <element signature="e#2500#2501#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="50" column="93" lean-forward="true" selection-start-line="50" selection-start-column="93" selection-end-line="50" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/ButterQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="663">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
@@ -1777,32 +1679,80 @@
     <entry file="file://$PROJECT_DIR$/core/assets/cutscenes/chapter3/dia.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/CutsceneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="51" column="91" lean-forward="true" selection-start-line="51" selection-start-column="91" selection-end-line="51" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Bernweich.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="e#9857#10027#0" expanded="true" />
-            <element signature="e#10026#10027#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="731">
+          <caret line="50" column="91" selection-start-line="50" selection-start-column="91" selection-end-line="50" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/cutscene/Cutscene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        <state relative-caret-position="408">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Manu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="61" column="79" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/Voices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="53" column="97" selection-start-line="53" selection-start-column="97" selection-end-line="53" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/mainMenu/MenuRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/sound/SoundManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="76" column="66" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Bernweich.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/interactables/Butter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/quickmathstudios/dieelite/game/StoryEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
         </state>
       </provider>
     </entry>

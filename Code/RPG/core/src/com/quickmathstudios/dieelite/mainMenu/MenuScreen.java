@@ -9,9 +9,9 @@ import com.quickmathstudios.dieelite.utillity.State;
  * **/
 public class MenuScreen implements State {
 
-    MainMenu menu; //Das Datenhaltende Objekt des Hauptmenüs
-    MenuController contr; //Der Controller des Hauptmenüs
-    MenuRenderer rend; //Der Renderer des Hauptmenüs
+    private MainMenu menu; //Das Datenhaltende Objekt des Hauptmenüs
+    private MenuController contr; //Der Controller des Hauptmenüs
+    private MenuRenderer rend; //Der Renderer des Hauptmenüs
 
     @Override
     public void Show() {

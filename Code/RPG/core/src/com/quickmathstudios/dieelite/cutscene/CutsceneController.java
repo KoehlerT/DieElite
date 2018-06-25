@@ -23,7 +23,6 @@ public class CutsceneController implements Observer, Disposable {
         if (observable instanceof MouseClick) {
             MouseClick mo = (MouseClick) observable;
             if (!cutscene.nextStep()){
-                System.out.println("Next Story");
                 StoryEngine.getInstance().updateStory();
             }
         }

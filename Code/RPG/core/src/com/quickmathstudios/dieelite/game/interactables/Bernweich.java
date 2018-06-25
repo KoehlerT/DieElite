@@ -146,18 +146,18 @@ public class Bernweich extends Interactable{
     }
 
     private void constructMessage(){
-        dialog = new SimpleMessage("Oh, Ich habe euch heute in meiner Vertretungsstunde","bernweich",
+        dialog = new SimpleMessage("Oh, Ich habe euch heute in meiner Vertretungsstunde","bernweich",29,
                 new SimpleMessage("Hab ich das gerade richtig gehört? Ihr wollt Karten spielen? Nein, das werden\n wir nicht machen. " +
                         "Wir üben etwas Mathematik der vergangenen Jahre. Wenn ihr auf \ndie Idee kommen solltet das Rätsel nicht ernst zu nehmen, " +
                         "dann werde\n ich es eurem Mathelehrer geben und der benotet es dann!","bernweich",4,
-                        new SimpleMessage(" Kevin du fängst an!\nIch stelle dir jetzt 10 Fragen und zwar solange, bis du alle richtig hast","bernweich",
+                        new SimpleMessage(" Kevin du fängst an!\nIch stelle dir jetzt 10 Fragen und zwar solange, bis du alle richtig hast","bernweich",30,
                                 frage1())));
     }
 
     @Override
     public void interact() {
         trys++;
-        if (trys != 3){
+        if (trys != 5){
             CurrentDialogue.getInstance().addDialogue(dialog);
         }else{
             CurrentDialogue.getInstance().addDialogue(new ActionMessage("Die Entwickler dieses Spiels lassen Gnade Walten\n" +

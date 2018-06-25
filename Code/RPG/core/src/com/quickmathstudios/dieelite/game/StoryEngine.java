@@ -38,7 +38,6 @@ public class StoryEngine {
                 RoomChanger.getInstance().changeRoom(new CorridorBase(new Vector2(100,100), (byte) 0b0000_1000));
             }else if (step == 4){
                 //Nach Kreide Holen zurück zu Traber
-                System.out.println("Hi Traber");
                 RoomChanger.getInstance().changeRoom(new Classroom1());
             }else if (step == 5) {
                 //Kreide kommt zurück
@@ -49,11 +48,9 @@ public class StoryEngine {
         }else if (chapter == 1){
             if (step == 0){
                 RoomChanger.getInstance().changeRoom(new Classroom2());
-                System.out.println("Made Room");
             }if (step == 1){
                 //Mit Frau Bernweich geredet
                 //Gong??
-                System.out.println("HI");
             }if (step == 2){
                 //Klick auf Tür
                 chapter = 2;
@@ -67,14 +64,12 @@ public class StoryEngine {
              * Herr Leopard findet ihn und sagt, er solle keine Kabelbinder verwenden...
              */
             if (step == 0){
-                System.out.println("Chp 3");
                 StateEngine.getInstance().SwitchState(new loadingState(
                         new CutsceneState(
                                 new MovieCutscene("chapter3",1/18f)
                         ),0));
             }
             if (step == 1){
-                System.out.println("Next chapter");
                 chapter = 3;
                 step = -1;
                 updateStory();
@@ -82,12 +77,10 @@ public class StoryEngine {
             }
         }else if (chapter == 3){
             if (step == 0){
-                System.out.println("Story 4");
                 StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter4",1f/18f)),0));
 
             }
             if (step == 1){
-                System.out.println("Ready");
                 chapter = 4;
                 step = -1;
                 StateEngine.getInstance().SwitchState(new GameState());
@@ -133,7 +126,6 @@ public class StoryEngine {
 
             if (step == 2){
                 //Ruderminigame
-                System.out.println("Load Minigame");
                 StateEngine.getInstance().SwitchState(new loadingState(new RowingState(),1));
             }
 
@@ -145,9 +137,8 @@ public class StoryEngine {
                 RoomChanger.getInstance().changeRoom(new Boathouse());
             }if (step == 5){
                 //Mit Herr Butter geredet
+                step=-1;
                 chapter = 7;
-                step = -1;
-                System.out.println("HI");
                 updateStory();
             }
         }else if (chapter == 7){
@@ -173,14 +164,12 @@ public class StoryEngine {
             if (branch == 0){
                 if (step == 0){
                     //Herr Butters Büro mit Fragen
-                    System.out.println("FRAGEN");
                     RoomChanger.getInstance().changeRoom(new ButterOffice());
                 }
             }
             if (branch == 1){
                 if (step == 1){
                     //Herr Butters Büro mit Opferritual
-                    System.out.println("OFER");
                     StateEngine.getInstance().SwitchState(new loadingState(new CutsceneState(new MovieCutscene("chapter10",1f/24f)),0));
                 }
 
@@ -197,14 +186,12 @@ public class StoryEngine {
 
     }
     public void updateStory() {
-        System.out.println(chapter+"/"+step);
         step++;
         this.getstoryState();
 
     }
 
     public void updateStory(int step){
-        System.out.println(chapter+"/"+step);
         this.step = step;
         this.getstoryState();
     }

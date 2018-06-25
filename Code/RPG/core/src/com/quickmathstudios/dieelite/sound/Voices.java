@@ -24,7 +24,7 @@ public class Voices implements Disposable {
 
 
     private void getVoices(){
-        voices = new Sound[29];
+        voices = new Sound[32];
         voices[0] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/TraberHolen.mp3"));
         voices[1] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/TraberJa.mp3"));
         voices[2] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/TraberNein.mp3"));
@@ -54,6 +54,9 @@ public class Voices implements Disposable {
         voices[26] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/ButterQuSchreiben.mp3"));
         voices[27] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/ButterQuAusr.mp3"));
         voices[28] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/ButterQuEwig.mp3"));
+        voices[29] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/BernweichVert.mp3"));
+        voices[30] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/BernweichKevin.mp3"));
+        voices[31] = Gdx.audio.newSound(Gdx.files.internal("sound/voice/ManuWeg.mp3"));
 
     }
 

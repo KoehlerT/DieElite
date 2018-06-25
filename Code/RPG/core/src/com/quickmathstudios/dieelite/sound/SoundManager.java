@@ -52,13 +52,17 @@ public class SoundManager implements Disposable {
     /**Ändert die Hintergrundmusik zu einem neuen Thema
      * **/
     public void switchBackground(int musicId){
+        if (musicId < 0 || musicId >= musics.length){
+            throw new RuntimeException("Fehler beim ändern der Musik");
+        }
+
+        if (currentBackground == musics[musicId])
+            return;
+
         if (currentBackground != null){
             currentBackground.stop();
         }
 
-        if (musicId < 0 || musicId >= musics.length){
-            throw new RuntimeException("Fehler beim ändern der Musik");
-        }
         currentBackground = musics[musicId];
         currentBackground.play();
 

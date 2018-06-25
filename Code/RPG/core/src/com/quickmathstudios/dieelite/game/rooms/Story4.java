@@ -29,7 +29,6 @@ public class Story4 extends Room {
                 new Action() {
                     @Override
                     public void act() {
-                        System.out.println("MANU");
                         ActivateManu();
                     }
                 }){

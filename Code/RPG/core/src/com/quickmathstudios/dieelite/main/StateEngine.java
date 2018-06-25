@@ -50,7 +50,6 @@ public class StateEngine {
         currentState = next;
 
 
-        System.out.println("Switched State to: "+currentState);
     }
 
     public void disposeEngine(){

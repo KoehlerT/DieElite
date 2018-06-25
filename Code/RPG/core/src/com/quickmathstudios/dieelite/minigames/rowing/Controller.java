@@ -52,7 +52,6 @@ public class Controller implements Disposable, Observer {
         for (int i = objects.size()-1; i >= 0; i--){
             if (objects.get(i).getHitbox().intersects(player.getHitbox())){
                 //Treffer
-                System.out.println("TREFFER");
                 SwimmingObject object = objects.get(i);
 
                 if (object.isEdible()){
@@ -103,7 +102,6 @@ public class Controller implements Disposable, Observer {
     }
 
     private void gameOver(){
-        System.out.println("Game Over, Score: "+toControl.getScore());
         if( toControl.getScore() > mark)
             StoryEngine.getInstance().setBranch(1);
         else
